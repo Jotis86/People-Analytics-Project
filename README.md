@@ -1,46 +1,46 @@
 # 📊 People Analytics Dashboard Power BI
 
-¡Bienvenido al repositorio del **People Analytics** creado con Power BI! 
-Este proyecto tiene como objetivo proporcionar, analizar y visualizar datos relacionados con los empleados, como la retención, el rendimiento, la satisfacción y más.
+Welcome to the **People Analytics** repository created with Power BI! 
+This project aims to provide, analyze, and visualize employee-related data such as retention, performance, satisfaction, and more.
 
-## 🚀 Descripción
+## 🚀 Description
 
-Este dashboard incluye:
-- 📈 **Visualizaciones interactivas**: Gráficos y tablas dinámicas para explorar los datos.
-- 📊 **Métricas clave**: Análisis de KPIs importantes como ventas, canales, productos, reclamaciones, funcionamiento de las campañas, y más.
-- 📅 **Análisis temporal**: Tendencias a lo largo del tiempo para identificar patrones y oportunidades.
-- 🗂️ **Tres pestañas**: 
-  - **Análisis General**: Vista general de todas las métricas.
-  - **Análisis Laboral**: Análisis detallado de NPS, FTE, absentismo, horas de formación, sanciones, y otras métricas.
-  - **Resumen**: Tabla dinámica de los empleados, evolución de contrataciones, horas de jornada, entre otras medidas analizadas.
+This dashboard includes:
+- 📈 **Interactive Visualizations**: Dynamic charts and tables to explore the data.
+- 📊 **Key Metrics**: Analysis of important KPIs such as sales, channels, products, claims, campaign performance, and more.
+- 📅 **Temporal Analysis**: Trends over time to identify patterns and opportunities.
+- 🗂️ **Three Tabs**: 
+  - **General Analysis**: Overview of all metrics.
+  - **Labor Analysis**: Detailed analysis of NPS, FTE, absenteeism, training hours, sanctions, and other metrics.
+  - **Summary**: Dynamic table of employees, hiring trends, working hours, among other analyzed measures.
 
-## 🔄 Proceso ETL
+## 🔄 ETL Process
 
-Este proyecto incluye un completo proceso de **ETL (Extracción, Transformación y Carga)**:
-- **Extracción**: Datos obtenidos de archivos CSV.
-- **Transformación**: 
-  - **Combinación de tablas**: Uso de Power Query para combinar y relacionar múltiples tablas de datos.
-  - **Limpieza de datos**: Eliminación de duplicados, tratamiento de valores nulos y normalización de datos.
-  - **Enriquecimiento de datos**: Agregación de columnas calculadas y transformación de datos para mejorar el análisis.
-- **Carga**: Integración de los datos transformados en Power BI para su análisis y visualización.
+This project includes a complete **ETL (Extract, Transform, Load)** process:
+- **Extraction**: Data obtained from CSV files.
+- **Transformation**: 
+  - **Table Combination**: Using Power Query to combine and relate multiple data tables.
+  - **Data Cleaning**: Removing duplicates, handling null values, and normalizing data.
+  - **Data Enrichment**: Adding calculated columns and transforming data to enhance analysis.
+- **Loading**: Integrating the transformed data into Power BI for analysis and visualization.
 
-## 🛠️ Métricas DAX
+## 🛠️ DAX Metrics
 
-Se han creado diversas métricas utilizando **DAX (Data Analysis Expressions)** para proporcionar análisis detallados y personalizados:
-- **Cálculo de KPIs.**
-- **Medidas calculadas**: Creación de medidas personalizadas para análisis específicos.
-- **Columnas calculadas**: Agregación de columnas adicionales para enriquecer los datos.
-- **Filtrado y segmentación**: Uso de DAX para aplicar filtros y segmentaciones dinámicas en los datos.
+Various metrics have been created using **DAX (Data Analysis Expressions)** to provide detailed and customized analysis:
+- **KPI Calculation.**
+- **Calculated Measures**: Creating custom measures for specific analyses.
+- **Calculated Columns**: Adding additional columns to enrich the data.
+- **Filtering and Segmentation**: Using DAX to apply dynamic filters and segmentations on the data.
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
-- `People Analytics.pbix`: Archivo principal del dashboard de Power BI.
-- `Imágenes/`: Capturas de pantalla del dashboard.
+- `People Analytics.pbix`: Main Power BI dashboard file.
+- `Images/`: Screenshots of the dashboard.
 
-## 🛠️ Requisitos
+## 🛠️ Requirements
 
 - Power BI Desktop
 
-## 📧 Contacto
+## 📧 Contact
 
-Para cualquier consulta, puedes contactarme en jotaduranbon@gmail.com.
+For any inquiries, you can contact me at jotaduranbon@gmail.com.
