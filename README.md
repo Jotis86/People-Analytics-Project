@@ -2,10 +2,12 @@
 
 ![Cover Image](images/principal.png)
 
+## 📋 Introduction
+
 Welcome to the **People Analytics** repository created with Power BI! 
 This project aims to provide, analyze, and visualize employee-related data such as retention, performance, satisfaction, and more.
 
-## Objectives
+## 🎯 Objectives
 
 The objective of this project is to provide an interactive and detailed analysis of key employee metrics to support strategic decision-making. This includes leveraging both Power BI for interactive dashboards and Python for data analysis, cleaning, and visualization.
 
