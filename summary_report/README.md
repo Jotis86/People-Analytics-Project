@@ -1,6 +1,6 @@
 # 📊 Summary Report
 
-![Summary Report Cover](assets/summary.png)
+![Summary Report Cover](../assets/summary.png)
 
 This directory contains images of the various charts and graphs generated during the analysis, along with brief descriptions of each.
 
