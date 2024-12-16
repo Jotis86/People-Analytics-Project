@@ -96,6 +96,10 @@ In this project, we use various metrics to analyze employee data effectively. So
 
 These metrics help in understanding the overall health of the organization, identifying areas for improvement, and making data-driven decisions.
 
+## 📂 Summary Report
+
+For a detailed summary of the visualizations and key metrics, please refer to the [Summary Report](summary_report/README.md).
+
 ## 📊 Visualizations
 
 In addition to the Power BI dashboard, a complete analysis has been performed using Python, including:
