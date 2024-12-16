@@ -22,6 +22,9 @@ This directory contains images of the various charts and graphs generated during
 - **🔄 External Rotation Distribution**: Displays the count of employees who have experienced external rotation.
 - **🔄 Internal Rotation Distribution**: Displays the count of employees who have experienced internal rotation.
 - **📈 NPS Distribution**: Shows the distribution of Net Promoter Scores (NPS).
+- **💼 Salary vs. Performance Evaluation**: Compares salary against performance evaluation scores.
+- **👴 Age vs. Tenure**: Analyzes the relationship between age and tenure.
+- **👴 Age vs. NPS**: Analyzes the relationship between age and Net Promoter Scores (NPS).
 
 ## 📊 Key Metrics
 
