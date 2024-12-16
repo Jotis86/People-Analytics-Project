@@ -3,44 +3,122 @@
 Welcome to the **People Analytics** repository created with Power BI! 
 This project aims to provide, analyze, and visualize employee-related data such as retention, performance, satisfaction, and more.
 
-## 🚀 Description
+## Objectives
 
-This dashboard includes:
-- 📈 **Interactive Visualizations**: Dynamic charts and tables to explore the data.
-- 📊 **Key Metrics**: Analysis of important KPIs such as sales, channels, products, claims, campaign performance, and more.
-- 📅 **Temporal Analysis**: Trends over time to identify patterns and opportunities.
-- 🗂️ **Three Tabs**: 
-  - **General Analysis**: Overview of all metrics.
-  - **Labor Analysis**: Detailed analysis of NPS, FTE, absenteeism, training hours, sanctions, and other metrics.
-  - **Summary**: Dynamic table of employees, hiring trends, working hours, among other analyzed measures.
+The objective of this project is to provide an interactive and detailed analysis of key employee metrics to support strategic decision-making. This includes leveraging both Power BI for interactive dashboards and Python for data analysis, cleaning, and visualization.
 
-## 🔄 ETL Process
+## 🚀 Functionality
 
-This project includes a complete **ETL (Extract, Transform, Load)** process:
-- **Extraction**: Data obtained from CSV files.
-- **Transformation**: 
-  - **Table Combination**: Using Power Query to combine and relate multiple data tables.
-  - **Data Cleaning**: Removing duplicates, handling null values, and normalizing data.
-  - **Data Enrichment**: Adding calculated columns and transforming data to enhance analysis.
-- **Loading**: Integrating the transformed data into Power BI for analysis and visualization.
+This project includes:
 
-## 🛠️ DAX Metrics
+- 📈 **Interactive visualizations**: Pivot charts and tables in Power BI to explore data.
+- 📊 **Key metrics**: Analysis of important KPIs such as retention, performance, satisfaction, and more.
+- 📅 **Temporal analysis**: Trends over time to identify patterns and opportunities.
+- 🗂️ **Three tabs in Power BI**:
+  - 🌍 **General Analysis**: Overview of all metrics.
+  - 📦 **Labor Analysis**: Detailed analysis of NPS, FTE, absenteeism, training hours, sanctions, and other metrics.
+  - 📊 **Summary**: Dynamic table of employees, hiring trends, working hours, among other analyzed measures.
+- 🐍 **Python Analysis**:
+  - 🧹 **Data Cleaning**: Using pandas for data cleaning and preprocessing.
+  - 📊 **Visualization**: Using matplotlib and seaborn for data visualization.
 
-Various metrics have been created using **DAX (Data Analysis Expressions)** to provide detailed and customized analysis:
-- **KPI Calculation.**
-- **Calculated Measures**: Creating custom measures for specific analyses.
-- **Calculated Columns**: Adding additional columns to enrich the data.
-- **Filtering and Segmentation**: Using DAX to apply dynamic filters and segmentations on the data.
+## 🛠️ Tools Used
+
+- 🖥️ **Power BI**: For creating the interactive dashboard.
+- 🐍 **Python**: For data analysis.
+  - 🐼 **pandas**: Data cleaning and preprocessing.
+  - 📊 **matplotlib and seaborn**: Data visualization.
+
+## 🔄 Development Process
+
+- 📥 **Extraction**: Data obtained from CSV files.
+- 🔄 **Transformation**:
+  - 🖥️ **Power BI**:
+    - 🔗 Combining tables using Power Query.
+    - 🧹 Data cleaning: Removing duplicates, handling null values, and normalizing data.
+    - 📈 Data enrichment: Adding calculated columns and transforming data to improve analysis.
+  - 🐍 **Python**:
+    - 🧹 Data cleaning with pandas: Removing duplicates, handling null values, and normalizing data.
+    - 📈 Data enrichment: Adding calculated columns and transforming data to improve analysis.
+- 📤 **Load**:
+  - 🖥️ **Power BI**: Integrating transformed data into Power BI for analysis and visualization.
+  - 🐍 **Python**: Preparing data for visualization and analysis in Jupyter notebooks.
+
+## 📈 Results
+
+Various metrics have been created using DAX (Data Analysis Expressions) in Power BI to provide detailed and customized analysis:
+
+- 📊 KPIs calculation.
+- 📏 Calculated measures for specific analyses.
+- ➕ Calculated columns to enrich the data.
+- 🔍 Filtering and dynamic segmentation of data.
+
+In Python, the analysis includes:
+
+- 🧹 Detailed data cleaning processes.
+- 📊 Creation of visualizations to explore and present data insights.
+
+## 📊 Power BI Dashboard
+
+Here are some screenshots of the Power BI dashboard:
+
+![General Analysis](images/general_analysis.png)
+![Labor Analysis](images/labor_analysis.png)
+![Summary](images/summary.png)
+
+## 📊 Visualizations
+
+In addition to the Power BI dashboard, a complete analysis has been performed using Python, including:
+
+### 🧹 Data Cleaning with Pandas:
+
+- **Removing Duplicates**: Ensuring that the dataset is free from duplicate entries to maintain data integrity.
+- **Handling Missing Values**: Addressing missing data points through imputation or removal to ensure a complete dataset.
+
+### 📊 Data Visualization with Matplotlib and Seaborn:
+
+- **Histograms and Bar Charts**: Visualizing the distribution of data and comparing different categories.
+- **Line Charts**: Analyzing trends over time to identify patterns and opportunities.
+- **Scatter Plots**: Exploring relationships between different variables to uncover correlations.
+- **Heatmaps**: Providing a visual representation of data density and relationships between variables.
+- **Box Plots**: Summarizing the distribution of data and identifying outliers.
 
 ## 📂 Project Structure
 
 - `People Analytics.pbix`: Main Power BI dashboard file.
 - `Images/`: Screenshots of the dashboard.
+- `eda.py`: Script for Exploratory Data Analysis (EDA).
+- `eda_visualizations.py`: Script for generating visualizations.
+- `requirements.txt`: List of Python dependencies.
+- `notebooks/`: Jupyter notebooks with the Python analysis.
+  - `data_cleaning.ipynb`: Notebook for data cleaning.
+  - `data_visualization.ipynb`: Notebook for data visualization.
+- `.gitignore`: Git ignore file.
+- `LICENSE`: License file.
+- `README.md`: Readme file.
 
 ## 🛠️ Requirements
 
 - Power BI Desktop
+- Python 3.x
+- Required Python libraries (listed in `requirements.txt`)
 
 ## 📧 Contact
 
-For any inquiries, you can contact me at jotaduranbon@gmail.com.
+For any inquiries, you can contact me at:
+
+- 📧 Email: jotaduranbon@gmail.com
+- 💼 LinkedIn: Juan Duran Bon
+
+## 💡 Suggestions and Contributions
+
+Suggestions and contributions are welcome. Please open an issue or submit a pull request to discuss any changes you would like to make. Here are some ways you can contribute:
+
+- 🐛 **Report Bugs**: If you find any bugs, please report them by opening an issue.
+- 🌟 **Feature Requests**: If you have ideas for new features, feel free to suggest them.
+- 💻 **Code Contributions**: You can contribute by fixing bugs, adding new features, or improving the documentation.
+- 📝 **Feedback**: Any feedback to improve the project is highly appreciated.
+
+## 📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
