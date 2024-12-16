@@ -1,5 +1,7 @@
 # 📊 People Analytics Dashboard Power BI
 
+![Cover Image](Images/principal.png)
+
 Welcome to the **People Analytics** repository created with Power BI! 
 This project aims to provide, analyze, and visualize employee-related data such as retention, performance, satisfaction, and more.
 
@@ -108,7 +110,7 @@ In addition to the Power BI dashboard, a complete analysis has been performed us
 For any inquiries, you can contact me at:
 
 - 📧 Email: jotaduranbon@gmail.com
-- 💼 LinkedIn: Juan Duran Bon
+- 💼 LinkedIn: [Juan Duran Bon](https://www.linkedin.com/in/juan-duran-bon)
 
 ## 💡 Suggestions and Contributions
 
@@ -121,4 +123,8 @@ Suggestions and contributions are welcome. Please open an issue or submit a pull
 
 ## 📜 License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+Thank you for visiting the **People Analytics** project! We hope you find the insights and visualizations helpful for your strategic decision-making. Happy analyzing! 🚀
