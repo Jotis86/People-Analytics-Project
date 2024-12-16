@@ -89,17 +89,27 @@ In addition to the Power BI dashboard, a complete analysis has been performed us
 
 ## 📂 Project Structure
 
-- `People Analytics.pbix`: Main Power BI dashboard file.
-- `Images/`: Screenshots of the dashboard.
-- `eda.py`: Script for Exploratory Data Analysis (EDA).
-- `eda_visualizations.py`: Script for generating visualizations.
-- `requirements.txt`: List of Python dependencies.
+- `app/`: Streamlit app to present the results.
+  - `app.py`: Main script for the Streamlit app.
+- `assets/`: Directory for app assets like images and logos.
+  - 🖼️ `menu.png`: Menu image.
+  - 🖼️ `portada.png`: Cover image.
+- `data/`: Directory for raw and processed data.
+  - 📄 `data.csv`: Raw marketing campaign data.
+  - 📄 `data_cleaned.csv`: Cleaned marketing campaign data.
+- `images/`: Directory for Power BI screenshots.
+  - 🖼️ `general_analysis.png`: Power BI screenshot 1.
+  - 🖼️ `labor_analysis.png`: Power BI screenshot 2.
+  - 🖼️ `summary.png`: Power BI screenshot 3.
 - `notebooks/`: Jupyter notebooks with the Python analysis.
-  - `data_cleaning.ipynb`: Notebook for data cleaning.
-  - `data_visualization.ipynb`: Notebook for data visualization.
-- `.gitignore`: Git ignore file.
-- `LICENSE`: License file.
-- `README.md`: Readme file.
+  - 📓 `data_cleaning.ipynb`: Notebook for data cleaning.
+  - 📓 `data_visualization.ipynb`: Notebook for data visualization.
+- `powerbi/`: Directory for Power BI files.
+  - 📊 `dashboard.pbix`: Main file of the Power BI dashboard.
+- 🚫 `.gitignore`: Git ignore file.
+- 📜 `LICENSE`: [License file](LICENSE).
+- 📄 `README.md`: Readme file.
+- 📋 `requirements.txt`: Python dependencies file.
 
 ## 🛠️ Requirements
 
