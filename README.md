@@ -2,13 +2,13 @@
 
 ![Cover Image](images/principal.png)
 
-![Commits](https://img.shields.io/github/commit-activity/m/Jotis86/Dashboard-People-Analytics-en-PowerBi)
-![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/Dashboard-People-Analytics-en-PowerBi)
-![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/Dashboard-People-Analytics-en-PowerBi)
-![Forks](https://img.shields.io/github/forks/Jotis86/Dashboard-People-Analytics-en-PowerBi)
-![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/Dashboard-People-Analytics-en-PowerBi)
+![Commits](https://img.shields.io/github/commit-activity/m/Jotis86/People-Analytics-Project)
+![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/People-Analytics-Project)
+![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/People-Analytics-Project)
+![Forks](https://img.shields.io/github/forks/Jotis86/People-Analytics-Project)
+![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/People-Analytics-Project)
 ![Autor](https://img.shields.io/badge/autor-Juan%20Duran%20Bon-blue)
-![Licencia](https://img.shields.io/github/license/Jotis86/Dashboard-People-Analytics-en-PowerBi)
+![Licencia](https://img.shields.io/github/license/Jotis86/People-Analytics-Project)
 
 
 ## 📋 Introduction
