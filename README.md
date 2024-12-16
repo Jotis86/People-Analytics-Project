@@ -83,16 +83,16 @@ Here are some screenshots of the Power BI dashboard:
 
 In this project, we use various metrics to analyze employee data effectively. Some of the key metrics include:
 
-- **Retention Rate**: Measures the percentage of employees who remain in the company over a specific period.
-- **Turnover Rate**: Calculates the percentage of employees who leave the company during a specific period.
-- **Absenteeism Rate**: Tracks the number of days employees are absent from work.
-- **Employee Satisfaction**: Gauges employee satisfaction levels through surveys and feedback.
-- **Net Promoter Score (NPS)**: Measures employee loyalty and likelihood to recommend the company.
-- **Training Hours**: Tracks the number of hours employees spend in training programs.
-- **Performance Evaluation Scores**: Assesses employee performance based on evaluations.
-- **Salary Analysis**: Analyzes salary distribution and trends across different departments and roles.
-- **Diversity Metrics**: Evaluates the diversity of the workforce in terms of gender, age, and other demographics.
-- **Productivity Metrics**: Measures employee productivity through various performance indicators.
+- **📈 Retention Rate**: Measures the percentage of employees who remain in the company over a specific period.
+- **🔄 Turnover Rate**: Calculates the percentage of employees who leave the company during a specific period.
+- **📉 Absenteeism Rate**: Tracks the number of days employees are absent from work.
+- **😊 Employee Satisfaction**: Gauges employee satisfaction levels through surveys and feedback.
+- **📈 Net Promoter Score (NPS)**: Measures employee loyalty and likelihood to recommend the company.
+- **⏱️ Training Hours**: Tracks the number of hours employees spend in training programs.
+- **📊 Performance Evaluation Scores**: Assesses employee performance based on evaluations.
+- **💰 Salary Analysis**: Analyzes salary distribution and trends across different departments and roles.
+- **🌐 Diversity Metrics**: Evaluates the diversity of the workforce in terms of gender, age, and other demographics.
+- **📈 Productivity Metrics**: Measures employee productivity through various performance indicators.
 
 These metrics help in understanding the overall health of the organization, identifying areas for improvement, and making data-driven decisions.
 
