@@ -117,7 +117,7 @@ In addition to the Power BI dashboard, a complete analysis has been performed us
 - **Heatmaps**: Providing a visual representation of data density and relationships between variables.
 - **Box Plots**: Summarizing the distribution of data and identifying outliers.
 
-![Dashboard Example](images/dashboard_example.png)
+![Dashboard Example](images/dashboard.png)
 
 The attached dashboard includes some of the visualizations created during the analysis, providing a comprehensive overview of the key metrics and insights.
 
