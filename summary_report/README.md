@@ -27,24 +27,30 @@ This directory contains images of the various charts and graphs generated during
 
 ### 🔄 Turnover Rate
 
-- **Definition**: The percentage of employees who leave the company during a specific period.
+- **Definition**: The turnover rate measures the percentage of employees who leave the company during a specific period. It is a critical metric for understanding employee retention and the overall stability of the workforce.
+- **Importance**: High turnover rates can indicate issues with employee satisfaction, management practices, or workplace culture. Conversely, low turnover rates suggest a stable and satisfied workforce.
 - **Calculation**: Turnover Rate = (Number of terminations during a period / Total number of employees during that period) * 100
+- **Example**: If a company has 10 terminations in a month and 200 employees, the turnover rate would be (10 / 200) * 100 = 5%.
 
 ### 📈 Net Promoter Score (NPS)
 
-- **Definition**: Measures employee loyalty and likelihood to recommend the company.
+- **Definition**: The Net Promoter Score (NPS) measures employee loyalty and their likelihood to recommend the company as a great place to work. Originally used for customer satisfaction, NPS has been adapted to gauge employee engagement.
+- **Importance**: NPS provides insights into employee satisfaction and loyalty. A high NPS indicates that employees are likely to recommend the company to others, reflecting a positive work environment.
 - **Calculation**: NPS = % Promoters - % Detractors
 - **Groups**:
-  - **Promoters**: Score 9-10
-  - **Passives**: Score 7-8
-  - **Detractors**: Score 1-6
+  - **Promoters**: Score 9-10. These employees are highly satisfied and likely to recommend the company.
+  - **Passives**: Score 7-8. These employees are satisfied but not enthusiastic enough to be promoters.
+  - **Detractors**: Score 1-6. These employees are dissatisfied and may negatively impact the company's reputation.
+- **Example**: If 60% of employees are promoters, 30% are passives, and 10% are detractors, the NPS would be 60% - 10% = 50.
 
 ### 📉 Absenteeism Rate
 
-- **Definition**: The percentage of work hours lost due to absenteeism.
+- **Definition**: The absenteeism rate measures the percentage of work hours lost due to employee absences. It includes absences due to illness, personal reasons, and other causes.
+- **Importance**: High absenteeism rates can indicate issues with employee health, workplace conditions, or job satisfaction. Monitoring absenteeism helps identify and address underlying problems.
 - **Calculation**: Absenteeism Rate = (Hours not worked due to occasional causes, IT, or other reasons / Effective agreed hours) * 100
 - **Effective Agreed Hours**: Agreed hours + Overtime hours - Hours not worked due to vacations and holidays
+- **Example**: If employees collectively miss 500 hours in a month and the effective agreed hours are 10,000, the absenteeism rate would be (500 / 10,000) * 100 = 5%.
 
-These visualizations provide a comprehensive overview of the dataset, highlighting key aspects such as demographics, salary, tenure, training, absenteeism, rotation, performance, and NPS.
+These visualizations provide a comprehensive overview of the dataset, highlighting key aspects such as demographics, salary, tenure, training, absenteeism, rotation, performance, and NPS. By analyzing these metrics, organizations can gain valuable insights into their workforce, identify areas for improvement, and make data-driven decisions to enhance employee satisfaction and productivity.
 
 ---
