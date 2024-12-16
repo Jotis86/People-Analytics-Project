@@ -23,6 +23,28 @@ This directory contains images of the various charts and graphs generated during
 - **🔄 Internal Rotation Distribution**: Displays the count of employees who have experienced internal rotation.
 - **📈 NPS Distribution**: Shows the distribution of Net Promoter Scores (NPS).
 
+## 📊 Key Metrics
+
+### 🔄 Turnover Rate
+
+- **Definition**: The percentage of employees who leave the company during a specific period.
+- **Calculation**: Turnover Rate = (Number of terminations during a period / Total number of employees during that period) * 100
+
+### 📈 Net Promoter Score (NPS)
+
+- **Definition**: Measures employee loyalty and likelihood to recommend the company.
+- **Calculation**: NPS = % Promoters - % Detractors
+- **Groups**:
+  - **Promoters**: Score 9-10
+  - **Passives**: Score 7-8
+  - **Detractors**: Score 1-6
+
+### 📉 Absenteeism Rate
+
+- **Definition**: The percentage of work hours lost due to absenteeism.
+- **Calculation**: Absenteeism Rate = (Hours not worked due to occasional causes, IT, or other reasons / Effective agreed hours) * 100
+- **Effective Agreed Hours**: Agreed hours + Overtime hours - Hours not worked due to vacations and holidays
+
 These visualizations provide a comprehensive overview of the dataset, highlighting key aspects such as demographics, salary, tenure, training, absenteeism, rotation, performance, and NPS.
 
 ---
