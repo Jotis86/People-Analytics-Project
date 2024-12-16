@@ -1,6 +1,6 @@
 # 📊 People Analytics Dashboard Power BI
 
-![Cover Image](Images/principal.png)
+![Cover Image](images/principal.png)
 
 Welcome to the **People Analytics** repository created with Power BI! 
 This project aims to provide, analyze, and visualize employee-related data such as retention, performance, satisfaction, and more.
