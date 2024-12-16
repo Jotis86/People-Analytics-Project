@@ -111,6 +111,17 @@ In addition to the Power BI dashboard, a complete analysis has been performed us
 - 📄 `README.md`: Readme file.
 - 📋 `requirements.txt`: Python dependencies file.
 
+## 🌐 Web App
+
+The interactive app created with Streamlit allows exploring the analysis results dynamically and accessibly. It includes features such as:
+- 📊 **Interactive charts and graphs**: Visualize data through various types of charts and graphs that update in real-time based on user interactions.
+- 🔍 **Filters to dynamically segment data**: Apply filters to the data to focus on specific segments, such as time periods, product categories, or customer demographics.
+- 📈 **Detailed views of key metrics and trends**: Drill down into specific metrics to see detailed trends and insights, helping to identify patterns and opportunities.
+- 🖥️ **User-friendly interface**: The app is designed to be intuitive and easy to use, making it accessible to users with varying levels of technical expertise.
+- 🛠️ **Customizable dashboards**: Users can customize the dashboards to suit their needs, adding or removing widgets and adjusting the layout as required.
+
+You can access the web app [here].
+
 ## 🛠️ Requirements
 
 - Power BI Desktop
