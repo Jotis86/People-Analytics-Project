@@ -79,6 +79,23 @@ Here are some screenshots of the Power BI dashboard:
 ![Labor Analysis](images/labor_analysis.png)
 ![Summary](images/summary.png)
 
+## 📊 Metrics Used
+
+In this project, we use various metrics to analyze employee data effectively. Some of the key metrics include:
+
+- **Retention Rate**: Measures the percentage of employees who remain in the company over a specific period.
+- **Turnover Rate**: Calculates the percentage of employees who leave the company during a specific period.
+- **Absenteeism Rate**: Tracks the number of days employees are absent from work.
+- **Employee Satisfaction**: Gauges employee satisfaction levels through surveys and feedback.
+- **Net Promoter Score (NPS)**: Measures employee loyalty and likelihood to recommend the company.
+- **Training Hours**: Tracks the number of hours employees spend in training programs.
+- **Performance Evaluation Scores**: Assesses employee performance based on evaluations.
+- **Salary Analysis**: Analyzes salary distribution and trends across different departments and roles.
+- **Diversity Metrics**: Evaluates the diversity of the workforce in terms of gender, age, and other demographics.
+- **Productivity Metrics**: Measures employee productivity through various performance indicators.
+
+These metrics help in understanding the overall health of the organization, identifying areas for improvement, and making data-driven decisions.
+
 ## 📊 Visualizations
 
 In addition to the Power BI dashboard, a complete analysis has been performed using Python, including:
@@ -99,13 +116,13 @@ In addition to the Power BI dashboard, a complete analysis has been performed us
 ## 📂 Project Structure
 
 - `app/`: Streamlit app to present the results.
-  - `app.py`: Main script for the Streamlit app.
+  - `main.py`: Main script for the Streamlit app.
 - `assets/`: Directory for app assets like images and logos.
   - 🖼️ `menu.png`: Menu image.
   - 🖼️ `portada.png`: Cover image.
 - `data/`: Directory for raw and processed data.
-  - 📄 `data.csv`: Raw marketing campaign data.
-  - 📄 `data_cleaned.csv`: Cleaned marketing campaign data.
+  - 📄 `marketing_campaign.csv`: Raw marketing campaign data.
+  - 📄 `marketing_campaign_cleaned.csv`: Cleaned marketing campaign data.
 - `images/`: Directory for Power BI screenshots.
   - 🖼️ `general_analysis.png`: Power BI screenshot 1.
   - 🖼️ `labor_analysis.png`: Power BI screenshot 2.
@@ -115,6 +132,9 @@ In addition to the Power BI dashboard, a complete analysis has been performed us
   - 📓 `data_visualization.ipynb`: Notebook for data visualization.
 - `powerbi/`: Directory for Power BI files.
   - 📊 `dashboard.pbix`: Main file of the Power BI dashboard.
+- `summary_report/`: Directory for summary report images and README.
+  - `images/`: Directory for summary report images.
+  - `README.md`: Explanation of the summary report.
 - 🚫 `.gitignore`: Git ignore file.
 - 📜 `LICENSE`: [License file](LICENSE).
 - 📄 `README.md`: Readme file.
