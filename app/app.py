@@ -4,7 +4,7 @@ import streamlit as st
 st.image("c:/Users/juane/OneDrive/Escritorio/Dashboard-People-Analytics-en-PowerBi/app/principal.png", use_column_width=True)
 
 # Título de la aplicación
-st.title("People Analytics Dashboard")
+st.title("People Analytics Project")
 
 # Menú de navegación
 st.sidebar.image("c:/Users/juane/OneDrive/Escritorio/Dashboard-People-Analytics-en-PowerBi/app/menu.png", use_column_width=True)
