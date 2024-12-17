@@ -1,13 +1,25 @@
 import streamlit as st
+import os
+
+# Obtener la ruta absoluta del directorio actual
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construir las rutas absolutas de las imágenes
+principal_image_path = os.path.join(current_dir, 'principal.png')
+menu_image_path = os.path.join(current_dir, 'menu.png')
+dashboard_image_path = os.path.join(current_dir, 'dashboard.png')
+general_analysis_image_path = os.path.join(current_dir, 'general_analysis.png')
+labor_analysis_image_path = os.path.join(current_dir, 'labor_analysis.png')
+summary_image_path = os.path.join(current_dir, 'summary.png')
 
 # Mostrar imagen principal
-st.image("c:/Users/juane/OneDrive/Escritorio/Dashboard-People-Analytics-en-PowerBi/app/principal.png", use_container_width=True)
+st.image(principal_image_path, use_container_width=True)
 
 # Título de la aplicación
 st.title("People Analytics Project")
 
 # Menú de navegación
-st.sidebar.image("c:/Users/juane/OneDrive/Escritorio/Dashboard-People-Analytics-en-PowerBi/app/menu.png", use_container_width=True)
+st.sidebar.image(menu_image_path, use_container_width=True)
 st.sidebar.title("📋 Navigation Menu")
 menu = st.sidebar.radio("Go to", ["Introduction & Objectives", "Project Overview", "Results", "Visualizations", "Power BI", "Metrics", "Project Conclusions"])
 
@@ -144,7 +156,7 @@ elif menu == "Visualizations":
 
     These visualizations are crucial for gaining a comprehensive understanding of the dataset, allowing organizations to identify key insights and make data-driven decisions.
     """)
-    st.image("c:/Users/juane/OneDrive/Escritorio/Dashboard-People-Analytics-en-PowerBi/app/dashboard.png", use_container_width=True)
+    st.image(dashboard_image_path, use_container_width=True)
     st.write("The attached dashboard includes some of the visualizations created during the analysis, providing a comprehensive overview of the key metrics and insights.")
 
 
@@ -167,9 +179,9 @@ elif menu == "Power BI":
 
     By leveraging the capabilities of Power BI, organizations can gain valuable insights into their workforce, identify areas for improvement, and make data-driven decisions to enhance employee satisfaction and productivity.
     """)
-    st.image("c:/Users/juane/OneDrive/Escritorio/Dashboard-People-Analytics-en-PowerBi/app/general_analysis.png", caption="General Analysis", use_container_width=True)
-    st.image("c:/Users/juane/OneDrive/Escritorio/Dashboard-People-Analytics-en-PowerBi/app/labor_analysis.png", caption="Labor Analysis", use_container_width=True)
-    st.image("c:/Users/juane/OneDrive/Escritorio/Dashboard-People-Analytics-en-PowerBi/app/summary.png", caption="Summary", use_container_width=True)
+    st.image(general_analysis_image_path, caption="General Analysis", use_container_width=True)
+    st.image(labor_analysis_image_path, caption="Labor Analysis", use_container_width=True)
+    st.image(summary_image_path, caption="Summary", use_container_width=True)
 
 
 elif menu == "Metrics":
