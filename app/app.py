@@ -218,18 +218,30 @@ elif menu == "Project Conclusions":
     st.write("""
     The People Analytics project has provided valuable insights into various aspects of employee data, including retention, performance, satisfaction, and more. By leveraging Power BI and Python, we have created interactive dashboards and detailed visualizations that support strategic decision-making.
 
+    Throughout this project, we have focused on understanding the key drivers of employee behavior and performance. By analyzing various metrics, we have been able to identify patterns and trends that can help organizations make more informed decisions. The insights gained from this analysis can be used to develop targeted strategies that enhance employee engagement, improve performance, and foster a positive workplace culture.
+
     ### Key Takeaways:
-    - **Employee Retention**: Understanding the factors that contribute to employee retention and identifying areas for improvement.
-    - **Performance Analysis**: Assessing employee performance and identifying high-performing individuals and teams.
-    - **Satisfaction and Engagement**: Gauging employee satisfaction and engagement levels to improve workplace culture.
-    - **Diversity and Inclusion**: Evaluating the diversity of the workforce and promoting inclusive practices.
-    - **Productivity Metrics**: Measuring productivity and identifying opportunities for optimization.
+    - **🔄 Employee Retention**: Understanding the factors that contribute to employee retention and identifying areas for improvement. This helps in developing strategies to reduce turnover and retain top talent.
+    - **📈 Performance Analysis**: Assessing employee performance and identifying high-performing individuals and teams. This enables targeted development and recognition programs to enhance productivity.
+    - **😊 Satisfaction and Engagement**: Gauging employee satisfaction and engagement levels to improve workplace culture. By understanding what drives satisfaction, organizations can implement initiatives to boost morale and engagement.
+    - **🌐 Diversity and Inclusion**: Evaluating the diversity of the workforce and promoting inclusive practices. This ensures a diverse and equitable work environment, fostering innovation and collaboration.
+    - **📊 Productivity Metrics**: Measuring productivity and identifying opportunities for optimization. This helps in streamlining processes and improving overall efficiency.
 
     ### Future Recommendations:
-    - **Continuous Monitoring**: Regularly update and monitor key metrics to stay informed about workforce trends.
-    - **Employee Feedback**: Incorporate employee feedback into the analysis to gain deeper insights into satisfaction and engagement.
-    - **Advanced Analytics**: Explore advanced analytics techniques, such as machine learning, to predict employee behavior and outcomes.
-    - **Integration with HR Systems**: Integrate the analytics platform with HR systems for real-time data updates and seamless analysis.
+    - **🔄 Continuous Monitoring**: Regularly update and monitor key metrics to stay informed about workforce trends. This allows for timely interventions and adjustments to strategies.
+    - **🗣️ Employee Feedback**: Incorporate employee feedback into the analysis to gain deeper insights into satisfaction and engagement. This ensures that employee voices are heard and considered in decision-making.
+    - **🤖 Advanced Analytics**: Explore advanced analytics techniques, such as machine learning, to predict employee behavior and outcomes. This can provide predictive insights and help in proactive management.
+    - **🔗 Integration with HR Systems**: Integrate the analytics platform with HR systems for real-time data updates and seamless analysis. This ensures that the data is always current and relevant, enhancing the accuracy of insights.
 
     By implementing these recommendations, organizations can enhance their people analytics capabilities and make more informed decisions to drive employee satisfaction and organizational success.
+
+    ### Final Thoughts
+    The journey through the People Analytics Dashboard has been enlightening, revealing the power of data in transforming workforce management. We believe that the insights and recommendations provided will serve as a valuable resource for your organization, guiding you towards a more engaged, productive, and satisfied workforce.
+
+    Remember, the key to success lies in continuous improvement and adaptation. Keep monitoring, analyzing, and acting on the data to stay ahead in the ever-evolving business landscape.
+
+    Thank you for being a part of this journey. If you have any questions or need further assistance, don't hesitate to reach out. Together, let's build a brighter future for your organization!
+
+    Best wishes,
+    Juan Duran Bon
     """)
