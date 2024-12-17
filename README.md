@@ -157,7 +157,7 @@ The interactive app created with Streamlit allows exploring the analysis results
 - 🖥️ **User-friendly interface**: The app is designed to be intuitive and easy to use, making it accessible to users with varying levels of technical expertise.
 - 🛠️ **Customizable dashboards**: Users can customize the dashboards to suit their needs, adding or removing widgets and adjusting the layout as required.
 
-You can access the web app [here].
+You can access the web app [here](https://people-analytics-project-cxrukqhwgdwnagx8cabr97.streamlit.app/)
 
 ## 🛠️ Requirements
 
