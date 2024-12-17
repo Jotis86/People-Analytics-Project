@@ -12,7 +12,8 @@ st.sidebar.title("📋 Navigation Menu")
 menu = st.sidebar.radio("Go to", ["Introduction & Objectives", "Project Overview", "Results", "Visualizations", "Power BI", "Metrics", "Project Conclusions"])
 
 # Botón para ir al repositorio de GitHub
-st.sidebar.markdown("[Go to GitHub Repository](https://github.com/Jotis86/People-Analytics-Project)")
+if st.sidebar.button('🔗 Go to GitHub Repository'):
+    st.sidebar.markdown("[Click here to visit the GitHub Repository](https://github.com/Jotis86/People-Analytics-Project)")
 
 # Secciones del menú
 if menu == "Introduction & Objectives":
