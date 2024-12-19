@@ -11,6 +11,7 @@ dashboard_image_path = os.path.join(current_dir, 'dashboard.png')
 general_analysis_image_path = os.path.join(current_dir, 'general_analysis.png')
 labor_analysis_image_path = os.path.join(current_dir, 'labor_analysis.png')
 summary_image_path = os.path.join(current_dir, 'summary.png')
+clip_video_path = os.path.join(current_dir, 'clip.mp4')
 
 # Mostrar imagen principal
 st.image(principal_image_path, use_container_width=True)
@@ -182,6 +183,7 @@ elif menu == "Power BI":
     st.image(general_analysis_image_path, caption="General Analysis", use_container_width=True)
     st.image(labor_analysis_image_path, caption="Labor Analysis", use_container_width=True)
     st.image(summary_image_path, caption="Summary", use_container_width=True)
+    st.video(clip_video_path)
 
 
 elif menu == "Metrics":
