@@ -13,11 +13,11 @@ labor_analysis_image_path = os.path.join(current_dir, 'labor_analysis.png')
 summary_image_path = os.path.join(current_dir, 'summary.png')
 clip_video_path = os.path.join(current_dir, 'clip.mp4')
 
-# Mostrar imagen principal
-st.image(principal_image_path, use_container_width=True)
-
 # Título de la aplicación
 st.title("People Analytics Project")
+
+# Mostrar imagen principal
+st.image(principal_image_path, use_container_width=True)
 
 # Menú de navegación
 st.sidebar.image(menu_image_path, use_container_width=True)
