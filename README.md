@@ -1,4 +1,4 @@
-# 📊 People Analytics Dashboard Power BI
+# 📊 People Analytics Project
 
 ![Cover Image](images/principal.png)
 
