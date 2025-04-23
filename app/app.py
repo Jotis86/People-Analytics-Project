@@ -1018,12 +1018,36 @@ elif menu == "📊 Power BI Dashboards":
 elif menu == "🔮 ML Predictions":
     st.markdown('<p class="section-header">🔮 Machine Learning Predictions</p>', unsafe_allow_html=True)
     
-    # Load the actual model
-    model = load_model()
+    # Load the model
+    loaded_obj = load_model()
     
-    if model:
-        st.success("✅ Machine learning model loaded successfully")
-        
+    if loaded_obj is not None:
+        # Check if it's a dictionary and extract the model
+        if isinstance(loaded_obj, dict):
+            st.info("Model loaded as a dictionary. Extracting the model...")
+            
+            # Display dictionary keys for debugging
+            st.write("Dictionary keys:", list(loaded_obj.keys()))
+            
+            # Try to find the model in common dictionary keys
+            model = None
+            possible_keys = ['model', 'clf', 'estimator', 'pipeline', 'best_model', 'best_estimator_']
+            
+            for key in possible_keys:
+                if key in loaded_obj:
+                    model = loaded_obj[key]
+                    st.success(f"Found model in key: '{key}'")
+                    break
+            
+            # If we still don't have a model, let the user select a key
+            if model is None and len(loaded_obj) > 0:
+                selected_key = st.selectbox("Select the key that contains the model:", list(loaded_obj.keys()))
+                model = loaded_obj[selected_key]
+                st.success(f"Using object from key: '{selected_key}'")
+        else:
+            # If it's not a dictionary, assume it's the model directly
+            model = loaded_obj
+            
         st.markdown("""
         <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; border-left: 5px solid #2E86C1; margin-bottom: 20px;">
             <h3 style="color: #2E86C1; margin-top: 0;">Employee Turnover Prediction</h3>
@@ -1097,9 +1121,13 @@ elif menu == "🔮 ML Predictions":
                 st.write("Input data for prediction:")
                 st.write(input_df)
                 
-                # Make prediction
-                prediction = model.predict(input_df)[0]
-                probability = model.predict_proba(input_df)[0] if hasattr(model, 'predict_proba') else [0.5, 0.5]
+                # Make sure 'model' has the predict method
+                if hasattr(model, 'predict'):
+                    prediction = model.predict(input_df)[0]
+                    probability = model.predict_proba(input_df)[0] if hasattr(model, 'predict_proba') else [0.5, 0.5]
+                else:
+                    st.error("The selected object doesn't have a predict method. Please select a different key.")
+                    st.stop()
                 
                 # Display prediction
                 if prediction == 1:
@@ -1216,3 +1244,169 @@ elif menu == "🔮 ML Predictions":
                 st.markdown("Try adjusting the input values or check that they match the expected format for the model.")
     else:
         st.error("Could not load the machine learning model. Using simulation mode instead.")
+        
+        # Notify user we're using a simulation
+        st.info("⚠️ Using a simulated prediction model for demonstration purposes")
+        
+        # Create interface for prediction inputs
+        st.markdown("### Enter Employee Information")
+        
+        # Use tabs to organize the form
+        tab1, tab2 = st.tabs(["Employee Details", "Contract & Compensation"])
+        
+        with tab1:
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                negligencias = st.number_input("Negligencias/Sanciones", 0, 10, 0)
+                year_birth = st.number_input("Año de Nacimiento", 1950, 2000, 1985)
+                edad = st.number_input("Edad", 20, 70, 35)
+                nuevas_contrataciones = st.selectbox("¿Es nueva contratación?", ["No", "Sí"])
+                nuevas_contrataciones = 1 if nuevas_contrataciones == "Sí" else 0
+                
+            with col2:
+                exp_previa = st.number_input("Experiencia previa (meses)", 0, 240, 36)
+                fecha_inicio = st.date_input("Fecha inicio de contrato", 
+                                          date(2015, 1, 1), 
+                                          min_value=date(2000, 1, 1),
+                                          max_value=date.today())
+        
+        with tab2:
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                antig_anios = st.number_input("Antigüedad en años", 0, 30, 3)
+                antig_meses = st.number_input("Antigüedad en meses", 0, 11, 6)
+                
+            with col2:
+                salario_inicial = st.number_input("Salario inicial 2020 (€)", 15000, 100000, 30000, step=1000)
+                salario_actual = st.number_input("Salario anual actual 2020 (€)", 15000, 150000, 35000, step=1000)
+        
+        # Prediction section
+        st.markdown("### Prediction")
+        
+        if st.button("Predict Turnover Risk", key="predict_button"):
+            try:
+                # Simulate a predictive model using a scoring system
+                risk_score = 0
+                
+                # Factor 1: Negligencias/Sanciones (high = bad)
+                if negligencias > 5:
+                    risk_score += 0.3
+                elif negligencias > 2:
+                    risk_score += 0.15
+                    
+                # Factor 2: Salary growth (low = bad)
+                salary_growth = (salario_actual - salario_inicial) / salario_inicial
+                if salary_growth < 0.05:
+                    risk_score += 0.25
+                elif salary_growth < 0.12:
+                    risk_score += 0.1
+                    
+                # Factor 3: Tenure (low = bad)
+                total_tenure = antig_anios + (antig_meses / 12)
+                if total_tenure < 1:
+                    risk_score += 0.2
+                elif total_tenure < 2:
+                    risk_score += 0.1
+                    
+                # Factor 4: Age (very young or near retirement = higher risk)
+                if edad < 28:
+                    risk_score += 0.15
+                elif edad > 58:
+                    risk_score += 0.1
+                    
+                # Factor 5: New hire status
+                if nuevas_contrataciones == 1:
+                    risk_score += 0.1
+                    
+                # Create a "prediction" based on our score
+                prediction = 1 if risk_score > 0.35 else 0
+                probability = [1 - risk_score, risk_score]
+                
+                # Display prediction
+                if prediction == 1:
+                    risk_level = "High"
+                    risk_color = "#E74C3C"
+                    risk_message = "This employee is at high risk of leaving."
+                else:
+                    risk_level = "Low"
+                    risk_color = "#2ECC71"
+                    risk_message = "This employee is likely to stay."
+                
+                # Display result
+                st.markdown(f"""
+                <div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; 
+                            border-left: 5px solid {risk_color}; margin-top: 20px;">
+                    <h3 style="color: {risk_color}; margin-top: 0;">Turnover Risk: {risk_level}</h3>
+                    <p>{risk_message}</p>
+                    <p>Probability of leaving: <b>{probability[1]:.2%}</b></p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Calculate factor impacts - based on our scoring logic
+                factors = [
+                    {"name": "Negligencias", "impact": 0.3 if negligencias > 5 else (0.15 if negligencias > 2 else 0)},
+                    {"name": "Crecimiento Salarial", "impact": 0.25 if salary_growth < 0.05 else (0.1 if salary_growth < 0.12 else 0)},
+                    {"name": "Antigüedad", "impact": 0.2 if total_tenure < 1 else (0.1 if total_tenure < 2 else 0)},
+                    {"name": "Edad", "impact": 0.15 if edad < 28 else (0.1 if edad > 58 else 0)},
+                    {"name": "Contratación Nueva", "impact": 0.1 if nuevas_contrataciones == 1 else 0}
+                ]
+                
+                chart_data = pd.DataFrame({
+                    'Factor': [f["name"] for f in factors],
+                    'Impact': [f["impact"] for f in factors]
+                })
+                
+                # Sort by impact
+                chart_data = chart_data.sort_values('Impact', ascending=True)
+                
+                # Feature importance visualization
+                st.markdown("### Key Factors")
+                
+                # Create visualization
+                fig, ax = plt.subplots(figsize=(10, 6))
+                bars = ax.barh(chart_data['Factor'], chart_data['Impact'], 
+                              color=['#3498DB', '#2ECC71', '#F39C12', '#E74C3C', '#9B59B6'])
+                
+                ax.set_title('Factors Influencing Turnover Risk', fontsize=14)
+                ax.set_xlabel('Impact Level')
+                ax.spines['top'].set_visible(False)
+                ax.spines['right'].set_visible(False)
+                plt.tight_layout()
+                
+                st.pyplot(fig)
+                
+                # Recommendations based on risk level
+                st.markdown("### Recommendations")
+                
+                if prediction == 1:  # High risk
+                    st.markdown("""
+                    <div style="background-color: #FDEDEC; padding: 15px; border-radius: 10px; border-left: 5px solid #E74C3C;">
+                        <h4 style="color: #E74C3C; margin-top: 0;">Retention Strategies</h4>
+                        <ul>
+                            <li>Schedule a one-on-one meeting to discuss career aspirations</li>
+                            <li>Review compensation and benefits package</li>
+                            <li>Provide opportunities for skills development and advancement</li>
+                            <li>Address any workplace concerns or issues</li>
+                            <li>Consider role adjustments to better align with employee strengths</li>
+                        </ul>
+                    </div>
+                    """, unsafe_allow_html=True)
+                else:  # Low risk
+                    st.markdown("""
+                    <div style="background-color: #EAFAF1; padding: 15px; border-radius: 10px; border-left: 5px solid #2ECC71;">
+                        <h4 style="color: #2ECC71; margin-top: 0;">Engagement Strategies</h4>
+                        <ul>
+                            <li>Continue regular check-ins and feedback sessions</li>
+                            <li>Identify opportunities for growth and development</li>
+                            <li>Consider for mentoring or knowledge-sharing roles</li>
+                            <li>Recognize and reward contributions</li>
+                            <li>Include in strategic initiatives and planning</li>
+                        </ul>
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+            except Exception as e:
+                st.error(f"Error making prediction: {e}")
+                st.markdown("Try adjusting the input values or check that they match the expected format for the model.")
