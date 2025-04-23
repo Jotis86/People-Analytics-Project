@@ -5,7 +5,7 @@ import os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Construir las rutas absolutas de las imágenes
-principal_image_path = os.path.join(current_dir, 'principal.png')
+principal_image_path = os.path.join(current_dir, 'banner.png')
 menu_image_path = os.path.join(current_dir, 'menu.png')
 dashboard_image_path = os.path.join(current_dir, 'dashboard.png')
 general_analysis_image_path = os.path.join(current_dir, 'general_analysis.png')
