@@ -441,31 +441,36 @@ elif menu == "📊 Project Overview":
         
         with tab2:
             # Tools - Simple two-column layout
-            st.markdown("""
-            <h3 style="color: #3498DB; text-align: center; margin-bottom: 20px;">Tools & Technologies</h3>
+            # Versión mucho más simple usando componentes nativos
+            st.subheader("Tools & Technologies")
             
-            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <div style="flex: 1; min-width: 250px; background-color: #f5f9ff; padding: 20px; border-radius: 10px; border-left: 5px solid #3498DB;">
-                    <h3 style="color: #3498DB; text-align: center;"><span style="font-size: 32px;">📊</span><br>Power BI</h3>
-                    <ul style="color: #555; list-style-type: none; padding-left: 0;">
-                        <li style="margin-bottom: 8px;">✓ Interactive dashboards</li>
-                        <li style="margin-bottom: 8px;">✓ Customizable visuals</li>
-                        <li style="margin-bottom: 8px;">✓ Real-time filtering</li>
-                        <li style="margin-bottom: 8px;">✓ Data relationships</li>
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("""
+                <div style="background-color: #f0f8ff; padding: 10px; border-radius: 5px; text-align: center;">
+                    <h3>📊 Power BI</h3>
+                    <ul style="list-style-type: none; padding-left: 0; text-align: left;">
+                        <li>✓ Interactive dashboards</li>
+                        <li>✓ Customizable visuals</li>
+                        <li>✓ Real-time filtering</li>
+                        <li>✓ Data relationships</li>
                     </ul>
                 </div>
-                
-                <div style="flex: 1; min-width: 250px; background-color: #f5fff9; padding: 20px; border-radius: 10px; border-left: 5px solid #2ECC71;">
-                    <h3 style="color: #2ECC71; text-align: center;"><span style="font-size: 32px;">🐍</span><br>Python Analysis</h3>
-                    <ul style="color: #555; list-style-type: none; padding-left: 0;">
-                        <li style="margin-bottom: 8px;">✓ Pandas data cleaning</li>
-                        <li style="margin-bottom: 8px;">✓ Matplotlib visualization</li>
-                        <li style="margin-bottom: 8px;">✓ Seaborn statistical plots</li>
-                        <li style="margin-bottom: 8px;">✓ NumPy calculations</li>
+                """, unsafe_allow_html=True)
+            
+            with col2:
+                st.markdown("""
+                <div style="background-color: #f0fff0; padding: 10px; border-radius: 5px; text-align: center;">
+                    <h3>🐍 Python Analysis</h3>
+                    <ul style="list-style-type: none; padding-left: a0; text-align: left;">
+                        <li>✓ Pandas data cleaning</li>
+                        <li>✓ Matplotlib visualization</li>
+                        <li>✓ Seaborn statistical plots</li>
+                        <li>✓ NumPy calculations</li>
                     </ul>
                 </div>
-            </div>
-            """, unsafe_allow_html=True)
+                """, unsafe_allow_html=True)
         
         with tab3:
             # Process - Simple numbered steps
