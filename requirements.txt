@@ -2,3 +2,5 @@ pandas
 matplotlib
 seaborn
 streamlit
+numpy
+Pillow
