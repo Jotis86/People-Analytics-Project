@@ -214,7 +214,7 @@ elif menu == "📊 Project Overview":
         col1, col2 = st.columns(2)
         
         with col1:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("""
             ### Power BI Analysis
             
@@ -226,7 +226,7 @@ elif menu == "📊 Project Overview":
             st.markdown('</div>', unsafe_allow_html=True)
         
         with col2:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("""
             ### Python Insights
             
@@ -247,7 +247,7 @@ elif menu == "📊 Project Overview":
         metric_col1, metric_col2, metric_col3 = st.columns(3)
         
         with metric_col1:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("### 🔄 Turnover Rate")
             
             if df is not None:
@@ -264,7 +264,7 @@ elif menu == "📊 Project Overview":
             st.markdown('</div>', unsafe_allow_html=True)
         
         with metric_col2:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("### 📈 NPS Score")
             
             if df is not None:
@@ -283,8 +283,8 @@ elif menu == "📊 Project Overview":
             st.markdown('</div>', unsafe_allow_html=True)
         
         with metric_col3:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### 📉 Absenteeism Rate")
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### 📉 Absenteeism")
             
             if df is not None:
                 # Calculate average days lost per employee
@@ -304,7 +304,7 @@ elif menu == "📊 Project Overview":
         metric_col4, metric_col5, metric_col6 = st.columns(3)
         
         with metric_col4:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("### 📊 Performance Score")
             
             if df is not None:
@@ -321,7 +321,7 @@ elif menu == "📊 Project Overview":
             st.markdown('</div>', unsafe_allow_html=True)
         
         with metric_col5:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("### ⏱️ Training Hours")
             
             if df is not None:
@@ -338,7 +338,7 @@ elif menu == "📊 Project Overview":
             st.markdown('</div>', unsafe_allow_html=True)
         
         with metric_col6:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("### 💰 Salary Growth")
             
             if df is not None:
