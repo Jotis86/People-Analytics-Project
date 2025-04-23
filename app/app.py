@@ -835,7 +835,7 @@ elif menu == "📊 Project Overview":
                     <span style="font-size: 2rem; color: white;">🔄</span>
                 </div>
                 <h4 style="color: #03A9F4; margin: 10px 0;">Retention Strategy</h4>
-                <p style="color: #333; margin: 0;">Focus efforts on departments with high turnover rates</p>
+                <p style="color: #333; margin: 0;">Focus targeted efforts on departments with consistently high turnover rates</p>
             </div>
             """, unsafe_allow_html=True)
         
@@ -846,7 +846,7 @@ elif menu == "📊 Project Overview":
                     <span style="font-size: 2rem; color: white;">🌟</span>
                 </div>
                 <h4 style="color: #9C27B0; margin: 10px 0;">Engagement Initiatives</h4>
-                <p style="color: #333; margin: 0;">Address low NPS scores with targeted programs</p>
+                <p style="color: #333; margin: 0;">Address low NPS scores with targeted customer experience programs</p>
             </div>
             """, unsafe_allow_html=True)
         
