@@ -148,56 +148,70 @@ st.markdown("""
 
 # Menú de navegación
 with st.sidebar:
-    # Custom CSS for sidebar
+    # Custom CSS for sidebar with blue background
     st.markdown("""
     <style>
         [data-testid=stSidebar] {
-            background-color: #f8f9fa;
-            border-right: 1px solid #e9ecef;
+            background-color: #2E86C1;  /* Blue background */
+            border-right: 1px solid #2574a9;
             padding: 1rem;
         }
         .sidebar-header {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: white;  /* White text on blue background */
             margin-bottom: 20px;
         }
-        .nav-item {
-            background-color: white;
+        /* Style for radio button container */
+        div.row-widget.stRadio > div {
+            background-color: transparent;
             border-radius: 8px;
-            padding: 10px 15px;
-            margin: 8px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        /* Style for radio button options */
+        div.row-widget.stRadio > div[role="radiogroup"] > label {
+            color: white !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px;
             transition: all 0.3s;
         }
-        .nav-item:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
+        div.row-widget.stRadio > div[role="radiogroup"] > label:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid white;
         }
-        .nav-icon {
-            font-size: 18px;
-            margin-right: 10px;
-            color: #FF4B4B;
+        /* White text for all elements in sidebar */
+        section[data-testid="stSidebar"] .element-container {
+            color: white !important;
         }
-        .nav-text {
-            font-weight: 500;
-            color: #444;
+        section[data-testid="stSidebar"] p, 
+        section[data-testid="stSidebar"] h1, 
+        section[data-testid="stSidebar"] h2, 
+        section[data-testid="stSidebar"] h3 {
+            color: white !important;
         }
+        /* Style for description text */
+        .nav-description {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7) !important;
+            margin-bottom: 20px;
+        }
+        /* Buttons with white background */
+        section[data-testid="stSidebar"] button {
+            background-color: white !important;
+            color: #2E86C1 !important;
+            border: none !important;
+            font-weight: bold !important;
+        }
+        section[data-testid="stSidebar"] button:hover {
+            background-color: #f0f0f0 !important;
+        }
+        /* Footer */
         .sidebar-footer {
             margin-top: 30px;
             padding-top: 10px;
-            border-top: 1px solid #e9ecef;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
             font-size: 12px;
-            color: #666;
+            color: rgba(255, 255, 255, 0.7) !important;
             text-align: center;
-        }
-        .github-btn {
-            background-color: #24292e !important;
-            color: white !important;
-            border-radius: 4px !important;
-            padding: 5px 10px !important;
-            font-size: 14px !important;
-            width: 100% !important;
         }
     </style>
     """, unsafe_allow_html=True)
@@ -221,13 +235,13 @@ with st.sidebar:
     menu = st.radio("", list(nav_options.keys()), label_visibility="collapsed")
     
     # Show description of selected option
-    st.markdown(f"<div style='font-size:14px; color:#666; margin-bottom:20px;'>{nav_options[menu]}</div>", unsafe_allow_html=True)
+    st.markdown(f'<div class="nav-description">{nav_options[menu]}</div>', unsafe_allow_html=True)
     
     # Separator
-    st.markdown("---")
+    st.markdown('<hr style="border-top: 1px solid rgba(255, 255, 255, 0.2); margin: 15px 0;">', unsafe_allow_html=True)
     
     # Resources section
-    st.markdown("### Resources")
+    st.markdown('<p style="font-size:18px; font-weight:500; color:white; margin-top:20px;">Resources</p>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     with col1:
@@ -245,7 +259,7 @@ with st.sidebar:
         <p>Version 1.0.0</p>
         <p>© 2023</p>
     </div>
-    """, unsafe_allow_html=True) 
+    """, unsafe_allow_html=True)
 
 
 # Load data for visualizations
