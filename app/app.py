@@ -147,11 +147,12 @@ if menu == "🏠 Home & Objectives":
         with col:
             feature = features[i]
             st.markdown(f"""
-            <div style="background-color: white; border-radius: 10px; padding: 15px; height: 160px; text-align: center; 
-                        border-top: 5px solid {feature['color']}; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <div style="background-color: white; border-radius: 10px; padding: 15px; height: 170px; text-align: center; 
+                        border-top: 5px solid {feature['color']}; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        display: flex; flex-direction: column;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">{feature['icon']}</div>
                 <h4 style="color: {feature['color']}; margin-bottom: 8px; font-size: 15px;">{feature['title']}</h4>
-                <p style="font-size: 11px; color: #333;">{feature['detail']}</p>
+                <p style="font-size: 10px; color: #333; margin-bottom: 0; overflow: hidden; word-wrap: break-word;">{feature['detail']}</p>
             </div>
             """, unsafe_allow_html=True)
     
