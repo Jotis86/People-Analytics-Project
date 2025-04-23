@@ -305,7 +305,7 @@ elif menu == "📊 Project Overview":
         
         with metric_col4:
             #st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### 📊 Performance Score")
+            st.markdown("### 📊 Performance")
             
             if df is not None:
                 avg_performance = df['Evaluación Desempeño'].mean()
