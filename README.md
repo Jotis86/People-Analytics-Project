@@ -2,15 +2,15 @@
 
 ![Cover Image](images/banner.png)
 
-![Commits](https://img.shields.io/github/commit-activity/t/Jotis86/People-Analytics-Project?color=green&label=commits)
-![Stars](https://img.shields.io/github/stars/Jotis86/People-Analytics-Project?color=green)
-![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/People-Analytics-Project?color=green)
-![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/People-Analytics-Project?color=green)
-![Forks](https://img.shields.io/github/forks/Jotis86/People-Analytics-Project?color=green)
-![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/People-Analytics-Project?color=green)
-![Último Commit](https://img.shields.io/github/last-commit/Jotis86/People-Analytics-Project?color=green)
-![Autor](https://img.shields.io/badge/autor-Juan%20Duran%20Bon-green)
-![Licencia](https://img.shields.io/github/license/Jotis86/People-Analytics-Project?color=green)
+![Commits](https://img.shields.io/github/commit-activity/t/Jotis86/People-Analytics-Project?color=ff80ab&label=commits)
+![Stars](https://img.shields.io/github/stars/Jotis86/People-Analytics-Project?color=ff80ab)
+![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/People-Analytics-Project?color=ff80ab)
+![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/People-Analytics-Project?color=ff80ab)
+![Forks](https://img.shields.io/github/forks/Jotis86/People-Analytics-Project?color=ff80ab)
+![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/People-Analytics-Project?color=ff80ab)
+![Último Commit](https://img.shields.io/github/last-commit/Jotis86/People-Analytics-Project?color=ff80ab)
+![Autor](https://img.shields.io/badge/autor-Juan%20Duran%20Bon-ff80ab)
+![Licencia](https://img.shields.io/github/license/Jotis86/People-Analytics-Project?color=ff80ab)
 
 
 ## 📋 Introduction
