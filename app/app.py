@@ -789,8 +789,6 @@ elif menu == "📊 Project Overview":
                 <p style="color: #333; margin: 5px 0;">• Compensation is a key driver</p>
                 <p style="color: #333; margin: 5px 0;">• Management quality matters</p>
                 <p style="color: #333; margin: 5px 0;">• Career development opportunities</p>
-                
-                <h3 style="color: #3498DB; text-align: center; margin-top: 15px;">✅ Performance</h3>
                 <p style="color: #333; margin: 5px 0;">• Strong correlation with training</p>
                 <p style="color: #333; margin: 5px 0;">• Higher investments = better outcomes</p>
                 <p style="color: #333; margin: 5px 0;">• Performance varies by department</p>
@@ -804,8 +802,6 @@ elif menu == "📊 Project Overview":
                 <p style="color: #333; margin: 5px 0;">• Significant variations in engagement</p>
                 <p style="color: #333; margin: 5px 0;">• Performance differs across teams</p>
                 <p style="color: #333; margin: 5px 0;">• Turnover rates vary significantly</p>
-                
-                <h3 style="color: #2ECC71; text-align: center; margin-top: 15px;">✅ Satisfaction</h3>
                 <p style="color: #333; margin: 5px 0;">• NPS analysis revealed key factors</p>
                 <p style="color: #333; margin: 5px 0;">• Work-life balance is critical</p>
                 <p style="color: #333; margin: 5px 0;">• Recognition affects engagement</p>
