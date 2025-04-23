@@ -58,6 +58,9 @@ def load_data():
 @st.cache_resource
 def load_model():
     try:
+        # Import joblib
+        import joblib
+        
         # Try multiple possible locations for the model file
         possible_paths = [
             os.path.join(current_dir, 'modelo_rotacion_externa_random_forest.pkl'),  # Same directory as app.py
@@ -72,8 +75,9 @@ def load_model():
         for path in possible_paths:
             if os.path.exists(path):
                 st.success(f"Model found at: {path}")
-                with open(path, 'rb') as file:
-                    model = pickle.load(file)
+                
+                # Use joblib to load the model
+                model = joblib.load(path)
                 return model
         
         # If we get here, no file was found
