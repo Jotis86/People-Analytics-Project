@@ -172,7 +172,7 @@ elif menu == "📊 Project Overview":
             col1, col2 = st.columns(2)
             
             with col1:
-                st.markdown('<div class="card">', unsafe_allow_html=True)
+                #st.markdown('<div class="card">', unsafe_allow_html=True)
                 st.markdown("""
                 ### Power BI
                 
@@ -196,7 +196,7 @@ elif menu == "📊 Project Overview":
                 st.markdown('</div>', unsafe_allow_html=True)
         
         with tab3:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("""
             ### Development Process
             
