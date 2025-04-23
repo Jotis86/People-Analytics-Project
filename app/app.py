@@ -443,31 +443,31 @@ elif menu == "📊 Project Overview":
             # Tools - Simple two-column layout
             # Versión mucho más simple usando componentes nativos
             st.subheader("Tools & Technologies")
-            
+    
             col1, col2 = st.columns(2)
             
             with col1:
                 st.markdown("""
-                <div style="background-color: #f0f8ff; padding: 10px; border-radius: 5px; text-align: center;">
-                    <h3>📊 Power BI</h3>
-                    <ul style="list-style-type: none; padding-left: 0; text-align: left;">
-                        <li>✓ Interactive dashboards</li>
-                        <li>✓ Customizable visuals</li>
-                        <li>✓ Real-time filtering</li>
-                        <li>✓ Data relationships</li>
+                <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                    <h3 style="color: #3498DB; text-align: center;">📊 Power BI</h3>
+                    <ul style="list-style-type: none; padding-left: 5px; color: #333;">
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Interactive dashboards</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Customizable visuals</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Real-time filtering</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Data relationships</span></li>
                     </ul>
                 </div>
                 """, unsafe_allow_html=True)
             
             with col2:
                 st.markdown("""
-                <div style="background-color: #f0fff0; padding: 10px; border-radius: 5px; text-align: center;">
-                    <h3>🐍 Python Analysis</h3>
-                    <ul style="list-style-type: none; padding-left: a0; text-align: left;">
-                        <li>✓ Pandas data cleaning</li>
-                        <li>✓ Matplotlib visualization</li>
-                        <li>✓ Seaborn statistical plots</li>
-                        <li>✓ NumPy calculations</li>
+                <div style="background-color: #f0fff0; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                    <h3 style="color: #2ECC71; text-align: center;">🐍 Python Analysis</h3>
+                    <ul style="list-style-type: none; padding-left: 5px; color: #333;">
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Pandas data cleaning</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Matplotlib visualization</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Seaborn statistical plots</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">NumPy calculations</span></li>
                     </ul>
                 </div>
                 """, unsafe_allow_html=True)
