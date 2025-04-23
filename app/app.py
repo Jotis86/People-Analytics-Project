@@ -359,52 +359,130 @@ elif menu == "📊 Project Overview":
     elif overview_submenu == "Conclusions":
         st.markdown('<p class="section-header">🎯 Project Conclusions</p>', unsafe_allow_html=True)
         
-        # Use columns for layout
-        col1, col2 = st.columns([2, 1])
-        
-        with col1:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### Key Findings")
-            st.markdown("""
-            The People Analytics project has revealed several important insights:
-            
-            - **Employee Retention Factors**: We identified key drivers of retention, including compensation, management quality, and career development opportunities.
-            
-            - **Performance Patterns**: Analysis revealed strong correlations between training investment and performance outcomes.
-            
-            - **Department-Level Insights**: Significant variations in engagement, performance, and turnover were observed across departments.
-            
-            - **Satisfaction Drivers**: NPS analysis highlighted crucial factors affecting employee satisfaction and engagement.
-            """)
-            st.markdown('</div>', unsafe_allow_html=True)
-        
-        with col2:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### Recommendations")
-            st.markdown("""
-            Based on our analysis:
-            
-            1. **Targeted Training**: Increase training in departments with lower performance scores
-            
-            2. **Retention Strategy**: Focus on departments with high turnover rates
-            
-            3. **Engagement Initiatives**: Address low NPS scores with targeted engagement programs
-            
-            4. **Continuous Monitoring**: Implement ongoing analytics for proactive management
-            """)
-            st.markdown('</div>', unsafe_allow_html=True)
-        
-        # Final thoughts
+        # Key Findings with more visual formatting
         st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### Future Directions")
-        st.markdown("""
-        To further enhance people analytics capabilities:
+        st.markdown("<h3 style='text-align: center; color: #1E88E5;'>💡 Key Findings</h3>", unsafe_allow_html=True)
         
-        - **Predictive Models**: Develop predictive models for turnover risk and performance outcomes
-        - **Real-Time Dashboards**: Implement real-time analytics for immediate insights
-        - **Integration with HRIS**: Seamlessly connect with HR information systems
-        - **Expanded Metrics**: Include additional metrics such as recruitment efficiency and culture indicators
-        """)
+        # Two columns for findings to make it more compact
+        f_col1, f_col2 = st.columns(2)
+        
+        with f_col1:
+            st.markdown("""
+            ✅ **Employee Retention Factors**
+            - Compensation is a key driver
+            - Management quality matters
+            - Career development opportunities
+            
+            ✅ **Performance Patterns**
+            - Strong correlation with training
+            - Higher investments = better outcomes 
+            - Performance varies by department
+            """)
+        
+        with f_col2:
+            st.markdown("""
+            ✅ **Department-Level Insights**
+            - Significant variations in engagement
+            - Performance differs across teams
+            - Turnover rates vary significantly
+            
+            ✅ **Satisfaction Drivers**
+            - NPS analysis revealed key factors
+            - Work-life balance is critical
+            - Recognition affects engagement
+            """)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Recommendations section with visual indicators
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: #FF5722;'>🚀 Recommendations</h3>", unsafe_allow_html=True)
+        
+        rec_cols = st.columns(4)
+        
+        with rec_cols[0]:
+            st.markdown("""
+            <div style='text-align: center;'>
+            <span style='font-size: 2.5rem;'>📚</span>
+            <h4>Targeted Training</h4>
+            <p>Increase training in departments with lower performance scores</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with rec_cols[1]:
+            st.markdown("""
+            <div style='text-align: center;'>
+            <span style='font-size: 2.5rem;'>🔄</span>
+            <h4>Retention Strategy</h4>
+            <p>Focus efforts on departments with high turnover rates</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with rec_cols[2]:
+            st.markdown("""
+            <div style='text-align: center;'>
+            <span style='font-size: 2.5rem;'>🌟</span>
+            <h4>Engagement Initiatives</h4>
+            <p>Address low NPS scores with targeted programs</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with rec_cols[3]:
+            st.markdown("""
+            <div style='text-align: center;'>
+            <span style='font-size: 2.5rem;'>📊</span>
+            <h4>Continuous Monitoring</h4>
+            <p>Implement ongoing analytics for proactive management</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Future Directions with visual timeline
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: #4CAF50;'>🔮 Future Directions</h3>", unsafe_allow_html=True)
+        
+        # Progress bar to visualize implementation timeline
+        st.markdown("<p style='text-align: center;'>Implementation Roadmap</p>", unsafe_allow_html=True)
+        st.progress(25)
+        
+        future_cols = st.columns(4)
+        
+        with future_cols[0]:
+            st.markdown("""
+            <div style='text-align: center; border-top: 4px solid #4CAF50;'>
+            <p style='color: #4CAF50; font-weight: bold;'>Phase 1</p>
+            <span style='font-size: 2rem;'>🧠</span>
+            <p>Predictive Models for turnover risk</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with future_cols[1]:
+            st.markdown("""
+            <div style='text-align: center; border-top: 4px solid #2196F3;'>
+            <p style='color: #2196F3; font-weight: bold;'>Phase 2</p>
+            <span style='font-size: 2rem;'>⏱️</span>
+            <p>Real-Time Analytics dashboards</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with future_cols[2]:
+            st.markdown("""
+            <div style='text-align: center; border-top: 4px solid #FFC107;'>
+            <p style='color: #FFC107; font-weight: bold;'>Phase 3</p>
+            <span style='font-size: 2rem;'>🔌</span>
+            <p>Integration with HRIS systems</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with future_cols[3]:
+            st.markdown("""
+            <div style='text-align: center; border-top: 4px solid #9C27B0;'>
+            <p style='color: #9C27B0; font-weight: bold;'>Phase 4</p>
+            <span style='font-size: 2rem;'>📈</span>
+            <p>Expanded Metrics for deeper insights</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
         st.markdown('</div>', unsafe_allow_html=True)
         
         # Signature
