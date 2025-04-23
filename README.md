@@ -18,29 +18,88 @@ This project aims to provide, analyze, and visualize employee-related data such 
 
 ## 🎯 Objectives
 
-The objective of this project is to provide an interactive and detailed analysis of key employee metrics to support strategic decision-making. This includes leveraging both Power BI for interactive dashboards and Python for data analysis, cleaning, and visualization.
+The primary objective of this project is to **transform raw HR data into actionable business intelligence** that supports strategic decision-making across all levels of the organization.  
+By combining **Power BI's visualization capabilities** with **Python's analytical power**, we aim to:
+
+- **Identify Key Retention Drivers**: Analyze factors correlated with employee turnover to develop targeted retention strategies  
+- **Measure Employee Engagement**: Track satisfaction metrics to understand workforce sentiment and improvement opportunities  
+- **Optimize Performance Management**: Provide insights into performance patterns across departments, roles, and time periods  
+- **Guide Compensation Strategy**: Analyze salary data relative to market rates and performance  
+- **Enable Data-Driven HR Decisions**: Replace intuition with evidence-based approaches to workforce management  
+- **Democratize HR Analytics**: Make complex workforce data accessible to stakeholders with varying technical expertise  
+- **Predict Future Workforce Trends**: Utilize historical patterns to forecast key metrics and proactively address challenges  
 
 ## 🚀 Functionality
 
-This project includes:
+This project delivers a comprehensive suite of analytical capabilities:
 
-- 📈 **Interactive visualizations**: Pivot charts and tables in Power BI to explore data.
-- 📊 **Key metrics**: Analysis of important KPIs such as retention, performance, satisfaction, and more.
-- 📅 **Temporal analysis**: Trends over time to identify patterns and opportunities.
-- 🗂️ **Three tabs in Power BI**:
-  - 🌍 **General Analysis**: Overview of all metrics.
-  - 📦 **Labor Analysis**: Detailed analysis of NPS, FTE, absenteeism, training hours, sanctions, and other metrics.
-  - 📊 **Summary**: Dynamic table of employees, hiring trends, working hours, among other analyzed measures.
-- 🐍 **Python Analysis**:
-  - 🧹 **Data Cleaning**: Using pandas for data cleaning and preprocessing.
-  - 📊 **Visualization**: Using matplotlib and seaborn for data visualization.
+## 📈 Interactive Visualizations
+
+- Dynamic filtering capabilities allowing drill-down from company-wide to individual department metrics  
+- Cross-filtering between visualizations for multidimensional analysis  
+- Customizable dashboards with slicers for time periods, departments, and job roles  
+- Tooltip-enhanced visuals with contextual information  
+- Mobile-responsive design for on-the-go insights  
+
+## 📊 Key Metrics Analysis
+
+- **Turnover Analysis**: Voluntary vs. involuntary, regrettable vs. non-regrettable turnover rates  
+- **Performance Metrics**: Distribution of ratings, trends, high-potential employee tracking  
+- **Satisfaction & Engagement**: NPS scores, survey results, correlation with retention  
+- **Compensation Analysis**: Salary benchmarking, pay equity, compensation-to-performance ratios  
+- **Training Effectiveness**: Learning hours vs. performance improvement, skill gap analysis  
+- **Diversity Metrics**: Representation analysis and inclusion indicators  
+
+## 📅 Temporal Analysis
+
+- Year-over-year comparison of all metrics  
+- Seasonal patterns in hiring, turnover, and performance  
+- Trend detection with statistical significance testing  
+- Predictive modeling for workforce planning  
+- Anomaly detection to highlight unexpected changes in key metrics  
+
 
 ## 🛠️ Tools Used
 
-- 🖥️ **Power BI**: For creating the interactive dashboard.
-- 🐍 **Python**: For data analysis.
-  - 🐼 **pandas**: Data cleaning and preprocessing.
-  - 📊 **matplotlib and seaborn**: Data visualization.
+## 🖥️ Power BI
+
+- **Power BI Desktop**: Primary development environment for dashboard creation  
+- **Power BI Service**: Cloud-based platform for sharing and collaboration  
+- **DAX (Data Analysis Expressions)**: Advanced formula language for custom calculations  
+- **Power Query**: ETL tool for data transformation and integration  
+- **M Language**: For advanced data preparation operations  
+- **Custom Visuals**: Including decomposition trees, key influencers, and AI visuals  
+- **Row-Level Security**: For appropriate data access control  
+
+## 🐍 Python Ecosystem
+
+### pandas (v1.3+)
+
+- Data cleaning and preprocessing  
+- Time series analysis with datetime functionality  
+- Pivot and aggregation operations  
+- Integration with SQL databases  
+
+### NumPy
+
+- Numerical operations and advanced calculations  
+
+### matplotlib and seaborn
+
+- Custom visualizations beyond standard Power BI capabilities  
+- Statistical visualization including box plots, violin plots, and correlation heatmaps  
+- Custom color palettes for consistent branding  
+
+### scikit-learn
+
+- Predictive modeling for turnover  
+- Clustering algorithms for employee segmentation  
+- Feature importance analysis  
+
+## 🚀 Streamlit
+
+- Interactive web application development  
+- Component-based UI for intuitive user experience  
 
 ## 🔄 Development Process
 
@@ -151,11 +210,24 @@ The attached dashboard includes some of the visualizations created during the an
 ## 🌐 Web App
 
 The interactive app created with Streamlit allows exploring the analysis results dynamically and accessibly. It includes features such as:
-- 📊 **Interactive charts and graphs**: Visualize data through various types of charts and graphs that update in real-time based on user interactions.
-- 🔍 **Filters to dynamically segment data**: Apply filters to the data to focus on specific segments, such as time periods, product categories, or customer demographics.
-- 📈 **Detailed views of key metrics and trends**: Drill down into specific metrics to see detailed trends and insights, helping to identify patterns and opportunities.
-- 🖥️ **User-friendly interface**: The app is designed to be intuitive and easy to use, making it accessible to users with varying levels of technical expertise.
-- 🛠️ **Customizable dashboards**: Users can customize the dashboards to suit their needs, adding or removing widgets and adjusting the layout as required.
+
+
+### 🔑 Key Features
+
+- 📊 **Interactive visualizations**  
+  Dynamic and responsive charts that update in real-time as filters are applied, making it easy to explore trends and compare different segments.
+
+- 🔍 **Multi-dimensional filtering**  
+  Easily segment data by department, role, tenure, performance ratings, and more. This allows for deep dives into specific employee groups or organizational units.
+
+- 📈 **Key HR metrics**  
+  Track and monitor essential HR indicators such as turnover rates, employee performance, engagement levels, and compensation structures. All metrics are updated automatically with the latest data.
+
+- 🧠 **Predictive insights**  
+  Leverage built-in analytics to identify trends, forecast risks, and uncover hidden patterns in employee behavior and workforce dynamics.
+
+- 🖥️ **User-friendly interface**  
+  Built with accessibility in mind, the dashboard is easy to use for both technical and non-technical users, ensuring that everyone can gain value from the data.
 
 You can access the web app [HERE](https://people-analytics-project-cxrukqhwgdwnagx8cabr97.streamlit.app/).
 
