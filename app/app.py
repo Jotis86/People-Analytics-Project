@@ -784,33 +784,34 @@ elif menu == "📊 Project Overview":
         
         with f_col1:
             st.markdown("""
-            <div style="background-color: #e3f2fd; padding: 10px; border-radius: 8px; border-left: 4px solid #1E88E5;">
-                <h4 style="color: #1E88E5;">✅ Employee Retention Factors</h4>
-                • Compensation is a key driver<br>
-                • Management quality matters<br>
-                • Career development opportunities<br>
+            <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <h3 style="color: #3498DB; text-align: center;">✅ Employee Retention</h3>
+                <p style="color: #333; margin: 5px 0;">• Compensation is a key driver</p>
+                <p style="color: #333; margin: 5px 0;">• Management quality matters</p>
+                <p style="color: #333; margin: 5px 0;">• Career development opportunities</p>
                 
-                <h4 style="color: #1E88E5; margin-top: 10px;">✅ Performance Patterns</h4>
-                • Strong correlation with training<br>
-                • Higher investments = better outcomes<br>
-                • Performance varies by department
+                <h3 style="color: #3498DB; text-align: center; margin-top: 15px;">✅ Performance</h3>
+                <p style="color: #333; margin: 5px 0;">• Strong correlation with training</p>
+                <p style="color: #333; margin: 5px 0;">• Higher investments = better outcomes</p>
+                <p style="color: #333; margin: 5px 0;">• Performance varies by department</p>
             </div>
             """, unsafe_allow_html=True)
 
         with f_col2:
             st.markdown("""
-            <div style="background-color: #e8f5e9; padding: 10px; border-radius: 8px; border-left: 4px solid #43A047;">
-                <h4 style="color: #43A047;">✅ Department-Level Insights</h4>
-                • Significant variations in engagement<br>
-                • Performance differs across teams<br>
-                • Turnover rates vary significantly<br>
+            <div style="background-color: #f5fff9; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <h3 style="color: #2ECC71; text-align: center;">✅ Department Insights</h3>
+                <p style="color: #333; margin: 5px 0;">• Significant variations in engagement</p>
+                <p style="color: #333; margin: 5px 0;">• Performance differs across teams</p>
+                <p style="color: #333; margin: 5px 0;">• Turnover rates vary significantly</p>
                 
-                <h4 style="color: #43A047; margin-top: 10px;">✅ Satisfaction Drivers</h4>
-                • NPS analysis revealed key factors<br>
-                • Work-life balance is critical<br>
-                • Recognition affects engagement
+                <h3 style="color: #2ECC71; text-align: center; margin-top: 15px;">✅ Satisfaction</h3>
+                <p style="color: #333; margin: 5px 0;">• NPS analysis revealed key factors</p>
+                <p style="color: #333; margin: 5px 0;">• Work-life balance is critical</p>
+                <p style="color: #333; margin: 5px 0;">• Recognition affects engagement</p>
             </div>
             """, unsafe_allow_html=True)
+
         
         # Espacio entre secciones
         st.markdown("<br>", unsafe_allow_html=True)
