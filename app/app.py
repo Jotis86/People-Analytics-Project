@@ -1094,10 +1094,16 @@ elif menu == "🔮 ML Predictions":
         
         if st.button("Predict Turnover Risk", key="predict_button"):
             try:
+                
+                # Convert date to a numeric representation
+                # Calculate days since a reference date (e.g., days since 2000-01-01)
+                reference_date = date(2000, 1, 1)
+                days_since_reference = (fecha_inicio - reference_date).days
+                
                 # Create input data dict - adjust feature names to match your model's expectations
                 input_data = {
                     'Negligencias_Sanciones': [negligencias],
-                    'Fecha_Inicio_Contrato': [fecha_inicio.strftime('%Y-%m-%d')],
+                    'Fecha_Inicio_Contrato': [days_since_reference],
                     'Antigüedad Años': [antig_anios],
                     'Antigüedad Meses': [antig_meses],
                     'Salario Anual Actual 2020': [salario_actual],
