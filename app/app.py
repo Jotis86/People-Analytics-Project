@@ -245,15 +245,46 @@ with st.sidebar:
     
     # Resources section
     st.markdown('<p style="font-size:18px; font-weight:500; color:white; margin-top:20px;">Resources</p>', unsafe_allow_html=True)
-    
+
+    # Add CSS for button-like links
+    st.markdown("""
+    <style>
+        .button-link {
+            display: block;
+            text-align: center;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .button-link:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Create two columns for the links
     col1, col2 = st.columns(2)
+
     with col1:
-        if st.button("📂 GitHub", use_container_width=True):
-            st.markdown("[View Repository](https://github.com/Jotis86/People-Analytics-Project)")
-    
+        st.markdown("""
+        <a href="https://github.com/Jotis86/People-Analytics-Project" target="_blank" class="button-link">
+            📂 GitHub
+        </a>
+        """, unsafe_allow_html=True)
+
     with col2:
-        if st.button("📚 Docs", use_container_width=True):
-            st.markdown("[Documentation](https://github.com/Jotis86/People-Analytics-Project/blob/main/README.md)")
+        st.markdown("""
+        <a href="https://github.com/Jotis86/People-Analytics-Project/blob/main/README.md" target="_blank" class="button-link">
+            📚 Docs
+        </a>
+        """, unsafe_allow_html=True)
     
     # Footer
     st.markdown("""
