@@ -197,7 +197,7 @@ with st.sidebar:
         /* Buttons with white background */
         section[data-testid="stSidebar"] button {
             background-color: white !important;
-            color: #3B82F6 !important; /* Use the lighter blue from gradient */
+            color: black !important; /* Use the lighter blue from gradient */
             border: none !important;
             font-weight: bold !important;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
