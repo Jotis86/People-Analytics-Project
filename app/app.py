@@ -451,8 +451,8 @@ elif menu == "📊 Project Overview":
             st.markdown("""
             <div style='text-align: center; border-top: 4px solid #4CAF50;'>
             <p style='color: #4CAF50; font-weight: bold;'>Phase 1</p>
-            <span style='font-size: 2rem;'>🧠</span>
-            <p>Predictive Models for turnover risk</p>
+            <span style='font-size: 2rem;'>🔄</span>
+            <p>Data Integration & Centralization Platform</p>
             </div>
             """, unsafe_allow_html=True)
         
