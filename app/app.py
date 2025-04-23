@@ -107,7 +107,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Mostrar imagen principal con tamaño controlado
-st.image(principal_image_path, use_container_width=True)
+#st.image(principal_image_path, use_container_width=True)
 
 # Menú de navegación (mejorado y consolidado)
 with st.sidebar:
