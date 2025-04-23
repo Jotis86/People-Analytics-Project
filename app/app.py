@@ -58,10 +58,27 @@ def load_data():
 @st.cache_resource
 def load_model():
     try:
-        model_path = os.path.join('models', 'modelo_rotacion_externa_random_forest.pkl')
-        with open(model_path, 'rb') as file:
-            model = pickle.load(file)
-        return model
+        # Try multiple possible locations for the model file
+        possible_paths = [
+            os.path.join(current_dir, 'modelo_rotacion_externa_random_forest.pkl'),  # Same directory as app.py
+            os.path.join(current_dir, 'models', 'modelo_rotacion_externa_random_forest.pkl'),  # models subfolder
+            os.path.join('models', 'modelo_rotacion_externa_random_forest.pkl'),  # models folder (relative)
+            os.path.join('..', 'modelo_rotacion_externa_random_forest.pkl'),  # Parent directory
+            os.path.join('..', 'models', 'modelo_rotacion_externa_random_forest.pkl'),  # models in parent dir
+            os.path.join('notebook', 'modelo_rotacion_externa_random_forest.pkl')  # notebook directory
+        ]
+        
+        # Try each path until we find the file
+        for path in possible_paths:
+            if os.path.exists(path):
+                st.success(f"Model found at: {path}")
+                with open(path, 'rb') as file:
+                    model = pickle.load(file)
+                return model
+        
+        # If we get here, no file was found
+        st.error("Model file not found in any of the expected locations")
+        return None
     except Exception as e:
         st.error(f"Error loading model: {e}")
         return None
