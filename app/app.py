@@ -632,7 +632,7 @@ elif menu == "📊 Project Overview":
                 
             st.markdown("""
                 </div>
-                <div style="margin-top: 15px; color: #333;">
+                <div style="margin-top: 15px; color: #3498DB;">
                     <p style="margin: 5px 0;"><strong>Definition:</strong> Percentage of employees who left during a period</p>
                     <p style="margin: 5px 0;"><strong>Formula:</strong> (Employees who left / Total employees) × 100</p>
                 </div>
