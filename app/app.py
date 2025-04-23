@@ -146,26 +146,107 @@ st.markdown("""
 # Mostrar imagen principal con tamaño controlado
 #st.image(principal_image_path, use_container_width=True)
 
-# Menú de navegación (mejorado y consolidado)
+# Menú de navegación
 with st.sidebar:
-    st.sidebar.image(menu_image_path, use_container_width=True)
-    st.sidebar.markdown("## 📋 Navigation Menu")
+    # Custom CSS for sidebar
+    st.markdown("""
+    <style>
+        [data-testid=stSidebar] {
+            background-color: #f8f9fa;
+            border-right: 1px solid #e9ecef;
+            padding: 1rem;
+        }
+        .sidebar-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .nav-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin: 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        .nav-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .nav-icon {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #FF4B4B;
+        }
+        .nav-text {
+            font-weight: 500;
+            color: #444;
+        }
+        .sidebar-footer {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #e9ecef;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        .github-btn {
+            background-color: #24292e !important;
+            color: white !important;
+            border-radius: 4px !important;
+            padding: 5px 10px !important;
+            font-size: 14px !important;
+            width: 100% !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
     
-    menu = st.sidebar.radio(
-        "Select a section:",
-        [
-            "🏠 Home & Objectives", 
-            "📊 Project Overview",
-            "📊 Interactive Visualizations", 
-            "📊 Power BI Dashboards",
-            "🔮 ML Predictions"
-        ]
-    )
+    # Logo/header image with shadow
+    st.image(menu_image_path, use_container_width=True)
     
-    # GitHub repo link
-    st.sidebar.markdown("---")
-    if st.sidebar.button('🔗 View GitHub Repository'):
-        st.sidebar.markdown("[GitHub Repository](https://github.com/Jotis86/People-Analytics-Project)")
+    # Navigation header
+    st.markdown('<p class="sidebar-header">📋 Navigation</p>', unsafe_allow_html=True)
+    
+    # Custom navigation options
+    nav_options = {
+        "🏠 Home & Objectives": "Get started and learn about the project goals", 
+        "📊 Project Overview": "Explore methodologies and frameworks",
+        "📈 Interactive Visualizations": "Explore interactive HR data insights", 
+        "📊 Power BI Dashboards": "View advanced analytics dashboards",
+        "🔮 ML Predictions": "Predict employee turnover risk"
+    }
+    
+    # Create radio buttons but style them better with custom HTML
+    menu = st.radio("", list(nav_options.keys()), label_visibility="collapsed")
+    
+    # Show description of selected option
+    st.markdown(f"<div style='font-size:14px; color:#666; margin-bottom:20px;'>{nav_options[menu]}</div>", unsafe_allow_html=True)
+    
+    # Separator
+    st.markdown("---")
+    
+    # Resources section
+    st.markdown("### Resources")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("📂 GitHub", use_container_width=True):
+            st.markdown("[View Repository](https://github.com/Jotis86/People-Analytics-Project)")
+    
+    with col2:
+        if st.button("📚 Docs", use_container_width=True):
+            st.markdown("[Documentation](https://github.com/Jotis86/People-Analytics-Project/blob/main/README.md)")
+    
+    # Footer
+    st.markdown("""
+    <div class="sidebar-footer">
+        <p>People Analytics Project</p>
+        <p>Version 1.0.0</p>
+        <p>© 2023</p>
+    </div>
+    """, unsafe_allow_html=True)
+
 
 # Load data for visualizations
 df = load_data()
