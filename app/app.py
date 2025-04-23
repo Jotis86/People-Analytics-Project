@@ -405,177 +405,96 @@ elif menu == "📊 Project Overview":
     if overview_submenu == "Project Structure":
         # Display project diagram
         st.markdown("""
-        <div style="text-align: center; margin-bottom: 25px;">
-            <h2 style="color: #3498DB; border-bottom: 2px solid #3498DB; display: inline-block; padding-bottom: 8px;">
-                Project Architecture
-            </h2>
-        </div>
+        <h2 style="color: #3498DB; text-align: center; margin-bottom: 20px;">
+            Project Architecture
+        </h2>
         """, unsafe_allow_html=True)
         
         # Use tabs for better organization
         tab1, tab2, tab3 = st.tabs(["🔍 Functionality", "🛠️ Tools Used", "📋 Process"])
         
         with tab1:
+            # Functionality - Simple visual list with icons
             st.markdown("""
-            <div style="background: linear-gradient(135deg, #f6f9fc 0%, #eef4f9 100%); padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h3 style="color: #3498DB; text-align: center; margin-bottom: 20px;">Key Functionality</h3>
-                
-                <div style="display: flex; margin-bottom: 15px; align-items: center;">
-                    <div style="background-color: #3498DB; color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                        <span style="font-size: 18px;">📈</span>
-                    </div>
-                    <div>
-                        <p style="margin: 0; font-weight: bold;">Interactive Power BI Visualizations</p>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Dynamic filtering and drill-down capabilities</p>
-                    </div>
-                </div>
-                
-                <div style="display: flex; margin-bottom: 15px; align-items: center;">
-                    <div style="background-color: #9B59B6; color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                        <span style="font-size: 18px;">📊</span>
-                    </div>
-                    <div>
-                        <p style="margin: 0; font-weight: bold;">Comprehensive KPI Tracking</p>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Real-time monitoring of critical HR metrics</p>
-                    </div>
-                </div>
-                
-                <div style="display: flex; margin-bottom: 15px; align-items: center;">
-                    <div style="background-color: #2ECC71; color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                        <span style="font-size: 18px;">📅</span>
-                    </div>
-                    <div>
-                        <p style="margin: 0; font-weight: bold;">Time-series Analysis</p>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Identify trends and patterns over time</p>
-                    </div>
-                </div>
-                
-                <div style="display: flex; margin-bottom: 15px; align-items: center;">
-                    <div style="background-color: #E74C3C; color: white; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                        <span style="font-size: 18px;">📊</span>
-                    </div>
-                    <div>
-                        <p style="margin: 0; font-weight: bold;">Three Specialized Dashboards</p>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Tailored views for different analysis needs</p>
-                    </div>
-                </div>
+            <h3 style="color: #3498DB; text-align: center; margin-bottom: 20px;">Key Functionality</h3>
+            
+            <div style="background-color: #f5f9ff; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                <h4 style="color: #3498DB; margin-top: 0;"><span style="font-size: 24px;">📈</span> Interactive Power BI Visualizations</h4>
+                <p style="margin-left: 35px; color: #555;">Dynamic filtering and drill-down capabilities</p>
+            </div>
+            
+            <div style="background-color: #f8f5ff; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                <h4 style="color: #9B59B6; margin-top: 0;"><span style="font-size: 24px;">📊</span> Comprehensive KPI Tracking</h4>
+                <p style="margin-left: 35px; color: #555;">Real-time monitoring of critical HR metrics</p>
+            </div>
+            
+            <div style="background-color: #f5fff9; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                <h4 style="color: #2ECC71; margin-top: 0;"><span style="font-size: 24px;">📅</span> Time-series Analysis</h4>
+                <p style="margin-left: 35px; color: #555;">Identify trends and patterns over time</p>
+            </div>
+            
+            <div style="background-color: #fff9f5; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                <h4 style="color: #E74C3C; margin-top: 0;"><span style="font-size: 24px;">📊</span> Three Specialized Dashboards</h4>
+                <p style="margin-left: 35px; color: #555;">Tailored views for different analysis needs</p>
             </div>
             """, unsafe_allow_html=True)
         
         with tab2:
+            # Tools - Simple two-column layout
             st.markdown("""
-            <div style="padding: 10px; border-radius: 10px;">
-                <h3 style="color: #3498DB; text-align: center; margin-bottom: 20px;">Tools & Technologies</h3>
+            <h3 style="color: #3498DB; text-align: center; margin-bottom: 20px;">Tools & Technologies</h3>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div style="flex: 1; min-width: 250px; background-color: #f5f9ff; padding: 20px; border-radius: 10px; border-left: 5px solid #3498DB;">
+                    <h3 style="color: #3498DB; text-align: center;"><span style="font-size: 32px;">📊</span><br>Power BI</h3>
+                    <ul style="color: #555; list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 8px;">✓ Interactive dashboards</li>
+                        <li style="margin-bottom: 8px;">✓ Customizable visuals</li>
+                        <li style="margin-bottom: 8px;">✓ Real-time filtering</li>
+                        <li style="margin-bottom: 8px;">✓ Data relationships</li>
+                    </ul>
+                </div>
                 
-                <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-                    <!-- Power BI Card -->
-                    <div style="flex: 1; min-width: 240px; background: linear-gradient(135deg, #f8fafc 0%, #edf3f8 100%); border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 5px solid #3498DB;">
-                        <div style="text-align: center; margin-bottom: 15px;">
-                            <span style="font-size: 40px;">📊</span>
-                            <h4 style="margin: 10px 0; color: #3498DB;">Power BI</h4>
-                        </div>
-                        <ul style="list-style-type: none; padding-left: 0;">
-                            <li style="margin-bottom: 8px;">
-                                <span style="color: #3498DB; margin-right: 8px;">✓</span> Interactive dashboards
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <span style="color: #3498DB; margin-right: 8px;">✓</span> Customizable visuals
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <span style="color: #3498DB; margin-right: 8px;">✓</span> Real-time filtering
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <span style="color: #3498DB; margin-right: 8px;">✓</span> Data relationships
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Python Card -->
-                    <div style="flex: 1; min-width: 240px; background: linear-gradient(135deg, #f8fafc 0%, #edf3f8 100%); border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 5px solid #2ECC71;">
-                        <div style="text-align: center; margin-bottom: 15px;">
-                            <span style="font-size: 40px;">🐍</span>
-                            <h4 style="margin: 10px 0; color: #2ECC71;">Python Analysis</h4>
-                        </div>
-                        <ul style="list-style-type: none; padding-left: 0;">
-                            <li style="margin-bottom: 8px;">
-                                <span style="color: #2ECC71; margin-right: 8px;">✓</span> Pandas data cleaning
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <span style="color: #2ECC71; margin-right: 8px;">✓</span> Matplotlib visualization
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <span style="color: #2ECC71; margin-right: 8px;">✓</span> Seaborn statistical plots
-                            </li>
-                            <li style="margin-bottom: 8px;">
-                                <span style="color: #2ECC71; margin-right: 8px;">✓</span> NumPy calculations
-                            </li>
-                        </ul>
-                    </div>
+                <div style="flex: 1; min-width: 250px; background-color: #f5fff9; padding: 20px; border-radius: 10px; border-left: 5px solid #2ECC71;">
+                    <h3 style="color: #2ECC71; text-align: center;"><span style="font-size: 32px;">🐍</span><br>Python Analysis</h3>
+                    <ul style="color: #555; list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 8px;">✓ Pandas data cleaning</li>
+                        <li style="margin-bottom: 8px;">✓ Matplotlib visualization</li>
+                        <li style="margin-bottom: 8px;">✓ Seaborn statistical plots</li>
+                        <li style="margin-bottom: 8px;">✓ NumPy calculations</li>
+                    </ul>
                 </div>
             </div>
             """, unsafe_allow_html=True)
         
         with tab3:
+            # Process - Simple numbered steps
             st.markdown("""
-            <div style="background: linear-gradient(135deg, #f6f9fc 0%, #eef4f9 100%); padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h3 style="color: #3498DB; text-align: center; margin-bottom: 20px;">Development Process</h3>
-                
-                <div style="display: flex; flex-direction: column;">
-                    <!-- Step 1 -->
-                    <div style="display: flex; margin-bottom: 25px;">
-                        <div style="background-color: #3498DB; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
-                            <span>1</span>
-                        </div>
-                        <div style="background-color: white; border-radius: 8px; padding: 15px; flex-grow: 1; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <h4 style="margin-top: 0; color: #3498DB;">Data Extraction</h4>
-                            <p style="margin-bottom: 0; color: #555;">Connecting to HR systems and retrieving necessary workforce data</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 2 -->
-                    <div style="display: flex; margin-bottom: 25px;">
-                        <div style="background-color: #9B59B6; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
-                            <span>2</span>
-                        </div>
-                        <div style="background-color: white; border-radius: 8px; padding: 15px; flex-grow: 1; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <h4 style="margin-top: 0; color: #9B59B6;">Cleaning & Transformation</h4>
-                            <p style="margin-bottom: 0; color: #555;">Processing and standardizing data for consistent analysis</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 3 -->
-                    <div style="display: flex; margin-bottom: 25px;">
-                        <div style="background-color: #2ECC71; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
-                            <span>3</span>
-                        </div>
-                        <div style="background-color: white; border-radius: 8px; padding: 15px; flex-grow: 1; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <h4 style="margin-top: 0; color: #2ECC71;">Exploratory Analysis</h4>
-                            <p style="margin-bottom: 0; color: #555;">Discovering patterns, relationships, and insights in the data</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 4 -->
-                    <div style="display: flex; margin-bottom: 25px;">
-                        <div style="background-color: #F39C12; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
-                            <span>4</span>
-                        </div>
-                        <div style="background-color: white; border-radius: 8px; padding: 15px; flex-grow: 1; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <h4 style="margin-top: 0; color: #F39C12;">Dashboard Creation</h4>
-                            <p style="margin-bottom: 0; color: #555;">Building interactive visualizations for data exploration</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 5 -->
-                    <div style="display: flex;">
-                        <div style="background-color: #E74C3C; color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
-                            <span>5</span>
-                        </div>
-                        <div style="background-color: white; border-radius: 8px; padding: 15px; flex-grow: 1; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <h4 style="margin-top: 0; color: #E74C3C;">Metric Development</h4>
-                            <p style="margin-bottom: 0; color: #555;">Creating KPIs and metrics to track organizational performance</p>
-                        </div>
-                    </div>
-                </div>
+            <h3 style="color: #3498DB; text-align: center; margin-bottom: 20px;">Development Process</h3>
+            
+            <div style="background-color: #f5f9ff; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                <h4><span style="display: inline-block; background-color: #3498DB; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">1</span> Data Extraction</h4>
+                <p style="margin-left: 40px; color: #555;">Connecting to HR systems and retrieving necessary workforce data</p>
+            </div>
+            
+            <div style="background-color: #f8f5ff; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                <h4><span style="display: inline-block; background-color: #9B59B6; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">2</span> Cleaning & Transformation</h4>
+                <p style="margin-left: 40px; color: #555;">Processing and standardizing data for consistent analysis</p>
+            </div>
+            
+            <div style="background-color: #f5fff9; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                <h4><span style="display: inline-block; background-color: #2ECC71; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">3</span> Exploratory Analysis</h4>
+                <p style="margin-left: 40px; color: #555;">Discovering patterns, relationships, and insights in the data</p>
+            </div>
+            
+            <div style="background-color: #fffcf5; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                <h4><span style="display: inline-block; background-color: #F39C12; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">4</span> Dashboard Creation</h4>
+                <p style="margin-left: 40px; color: #555;">Building interactive visualizations for data exploration</p>
+            </div>
+            
+            <div style="background-color: #fff9f5; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                <h4><span style="display: inline-block; background-color: #E74C3C; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">5</span> Metric Development</h4>
+                <p style="margin-left: 40px; color: #555;">Creating KPIs and metrics to track organizational performance</p>
             </div>
             """, unsafe_allow_html=True)
     
