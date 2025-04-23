@@ -1017,10 +1017,10 @@ elif menu == "📊 Power BI Dashboards":
 
 # Add the new section at the end of your app, with the other menu sections
 elif menu == "🔮 ML Predictions":
-    st.markdown('<p class="section-header">🔮 Machine Learning Predictions</p>', unsafe_allow_html=True)
+    #st.markdown('<p class="section-header">🔮 Machine Learning Predictions</p>', unsafe_allow_html=True)
     
     # Notify user we're using a rule-based model
-    st.info("Using a rule-based prediction model based on HR research and best practices")
+    #st.info("Using a rule-based prediction model based on HR research and best practices")
     
     st.markdown("""
     <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; border-left: 5px solid #2E86C1; margin-bottom: 20px;">
@@ -1204,10 +1204,10 @@ elif menu == "🔮 ML Predictions":
             # Display result
             st.markdown(f"""
             <div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; 
-                        border-left: 5px solid {risk_color}; margin-top: 20px;">
+                        border-left: 5px solid {risk_color}; margin-top: 20px; width: 70%;"> <!-- Added width: 70% -->
                 <h3 style="color: {risk_color}; margin-top: 0;">Turnover Risk: {risk_level}</h3>
-                <p>{risk_message}</p>
-                <p>Probability of leaving: <b>{risk_score:.2%}</b></p>
+                <p style="color: #333;">{risk_message}</p> <!-- Added color to ensure visibility -->
+                <p style="color: #333;">Probability of leaving: <b>{risk_score:.2%}</b></p> <!-- Added color -->
             </div>
             """, unsafe_allow_html=True)
             
@@ -1284,9 +1284,9 @@ elif menu == "🔮 ML Predictions":
                 rec_items = "".join([f"<li>{rec}</li>" for rec in specific_recs])
                 
                 st.markdown(f"""
-                <div style="background-color: #FDEDEC; padding: 15px; border-radius: 10px; border-left: 5px solid #E74C3C;">
+                <div style="background-color: #FDEDEC; padding: 15px; border-radius: 10px; border-left: 5px solid #E74C3C; width: 85%;">
                     <h4 style="color: #E74C3C; margin-top: 0;">Retention Strategies</h4>
-                    <ul>
+                    <ul style="color: #333;"> <!-- Added color to ensure visibility -->
                         {rec_items}
                         <li>Schedule a one-on-one meeting to discuss career aspirations</li>
                         <li>Review overall compensation and benefits package</li>
@@ -1296,9 +1296,9 @@ elif menu == "🔮 ML Predictions":
                 """, unsafe_allow_html=True)
             elif risk_score > 0.25:  # Moderate risk
                 st.markdown("""
-                <div style="background-color: #FEF9E7; padding: 15px; border-radius: 10px; border-left: 5px solid #F39C12;">
+                <div style="background-color: #FEF9E7; padding: 15px; border-radius: 10px; border-left: 5px solid #F39C12; width: 85%;">
                     <h4 style="color: #F39C12; margin-top: 0;">Preventive Measures</h4>
-                    <ul>
+                    <ul style="color: #333;"> <!-- Added color to ensure visibility -->
                         <li>Schedule regular check-ins to gauge job satisfaction</li>
                         <li>Ensure competitive compensation based on market rates</li>
                         <li>Provide learning and development opportunities</li>
@@ -1309,9 +1309,9 @@ elif menu == "🔮 ML Predictions":
                 """, unsafe_allow_html=True)
             else:  # Low risk
                 st.markdown("""
-                <div style="background-color: #EAFAF1; padding: 15px; border-radius: 10px; border-left: 5px solid #2ECC71;">
+                <div style="background-color: #EAFAF1; padding: 15px; border-radius: 10px; border-left: 5px solid #2ECC71; width: 85%;">
                     <h4 style="color: #2ECC71; margin-top: 0;">Engagement Strategies</h4>
-                    <ul>
+                    <ul style="color: #333;"> <!-- Added color to ensure visibility -->
                         <li>Continue regular feedback and recognition</li>
                         <li>Identify opportunities for taking on new challenges</li>
                         <li>Consider for mentoring or knowledge-sharing roles</li>
