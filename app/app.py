@@ -835,7 +835,7 @@ elif menu == "📊 Project Overview":
                     <span style="font-size: 2rem; color: white;">🔄</span>
                 </div>
                 <h4 style="color: #03A9F4; margin: 10px 0;">Retention Strategy</h4>
-                <p style="color: #333; margin: 0;">Focus targeted efforts on departments with consistently high turnover rates</p>
+                <p style="color: #333; margin: 0;">Target efforts at departments with consistently high turnover</p>
             </div>
             """, unsafe_allow_html=True)
         
