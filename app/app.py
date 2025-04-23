@@ -1409,4 +1409,4 @@ elif menu == "🔮 ML Predictions":
                 
             except Exception as e:
                 st.error(f"Error making prediction: {e}")
-                st.markdown("Try adjusting the input values or check that they match the expected format for the model.")
+                st.markdown("Try adjusting the input values or check that they match the expected format for the model.") 
