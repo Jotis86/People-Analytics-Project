@@ -148,18 +148,18 @@ st.markdown("""
 
 # Menú de navegación
 with st.sidebar:
-    # Custom CSS for sidebar with blue background
+    # Custom CSS for sidebar with gradient background to match banner
     st.markdown("""
     <style>
         [data-testid=stSidebar] {
-            background-color: #2E86C1;  /* Blue background */
-            border-right: 1px solid #2574a9;
+            background: linear-gradient(to right, #1E3A8A, #3B82F6); /* Exact gradient from banner */
+            border-right: 1px solid #1E3A8A;
             padding: 1rem;
         }
         .sidebar-header {
             font-size: 24px;
             font-weight: bold;
-            color: white;  /* White text on blue background */
+            color: white;  /* White text on gradient background */
             margin-bottom: 20px;
         }
         /* Style for radio button container */
@@ -191,18 +191,21 @@ with st.sidebar:
         /* Style for description text */
         .nav-description {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.7) !important;
+            color: rgba(255, 255, 255, 0.8) !important;
             margin-bottom: 20px;
         }
         /* Buttons with white background */
         section[data-testid="stSidebar"] button {
             background-color: white !important;
-            color: #2E86C1 !important;
+            color: #3B82F6 !important; /* Use the lighter blue from gradient */
             border: none !important;
             font-weight: bold !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
         }
         section[data-testid="stSidebar"] button:hover {
             background-color: #f0f0f0 !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
         }
         /* Footer */
         .sidebar-footer {
