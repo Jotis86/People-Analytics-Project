@@ -2,13 +2,15 @@
 
 ![Cover Image](images/banner.png)
 
-![Commits](https://img.shields.io/github/commit-activity/m/Jotis86/People-Analytics-Project)
-![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/People-Analytics-Project)
-![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/People-Analytics-Project)
-![Forks](https://img.shields.io/github/forks/Jotis86/People-Analytics-Project)
-![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/People-Analytics-Project)
-![Autor](https://img.shields.io/badge/autor-Juan%20Duran%20Bon-blue)
-![Licencia](https://img.shields.io/github/license/Jotis86/People-Analytics-Project)
+![Commits](https://img.shields.io/github/commit-activity/t/Jotis86/People-Analytics-Project?color=green&label=commits)
+![Stars](https://img.shields.io/github/stars/Jotis86/People-Analytics-Project?color=green)
+![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/People-Analytics-Project?color=green)
+![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/People-Analytics-Project?color=green)
+![Forks](https://img.shields.io/github/forks/Jotis86/People-Analytics-Project?color=green)
+![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/People-Analytics-Project?color=green)
+![Último Commit](https://img.shields.io/github/last-commit/Jotis86/People-Analytics-Project?color=green)
+![Autor](https://img.shields.io/badge/autor-Juan%20Duran%20Bon-green)
+![Licencia](https://img.shields.io/github/license/Jotis86/People-Analytics-Project?color=green)
 
 
 ## 📋 Introduction
@@ -73,7 +75,7 @@ This project delivers a comprehensive suite of analytical capabilities:
 
 ## 🐍 Python Ecosystem
 
-### pandas (v1.3+)
+### pandas
 
 - Data cleaning and preprocessing  
 - Time series analysis with datetime functionality  
