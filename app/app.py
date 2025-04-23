@@ -560,7 +560,7 @@ elif menu == "📊 Project Overview":
                 <ul style="list-style-type: none; padding-left: 5px; color: #333;">
                     <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Comprehensive data cleaning methodologies</span></li>
                     <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Statistical analysis of key workforce variables</span></li>
-                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Correlation analysis between performance factors</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Correlation analysis</span></li>
                     <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Outlier detection in salary and performance metrics</span></li>
                 </ul>
             </div>
@@ -585,7 +585,7 @@ elif menu == "📊 Project Overview":
             <div style="background-color: #f8f5ff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
                 <span style="font-size: 32px;">🔄</span>
                 <h4 style="margin: 10px 0; color: #9B59B6;">Turnover Patterns</h4>
-                <p style="color: #333;">Voluntary turnover is 2x higher in certain departments</p>
+                <p style="color: #333;">Voluntary turnover is 2x higher in certain organizational areas</p>
             </div>
             """, unsafe_allow_html=True)
         
