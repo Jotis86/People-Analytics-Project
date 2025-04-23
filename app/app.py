@@ -745,7 +745,7 @@ elif menu == "📊 Project Overview":
         </div>
         """, unsafe_allow_html=True)
 
-if menu == "📊 Interactive Visualizations":
+elif menu == "📊 Interactive Visualizations":
     st.markdown('<p class="section-header">📊 Interactive Visualizations</p>', unsafe_allow_html=True)
     
     # Visualization selection
