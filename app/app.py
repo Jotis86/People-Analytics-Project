@@ -471,6 +471,38 @@ elif menu == "📊 Project Overview":
                     </ul>
                 </div>
                 """, unsafe_allow_html=True)
+
+            # Agrega un pequeño espacio entre las filas
+            st.markdown("<br>", unsafe_allow_html=True)
+            
+            # Segunda fila de tecnologías
+            col3, col4 = st.columns(2)
+            
+            with col3:
+                st.markdown("""
+                <div style="background-color: #f8f5ff; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                    <h3 style="color: #9B59B6; text-align: center;">🧠 Machine Learning</h3>
+                    <ul style="list-style-type: none; padding-left: 5px; color: #333;">
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Predictive employee turnover models</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Scikit-learn classification algorithms</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Feature importance analysis</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Performance metric evaluation</span></li>
+                    </ul>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            with col4:
+                st.markdown("""
+                <div style="background-color: #fff8f5; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                    <h3 style="color: #E74C3C; text-align: center;">🌟 Streamlit</h3>
+                    <ul style="list-style-type: none; padding-left: 5px; color: #333;">
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Interactive web applications</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Real-time data exploration</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Customizable user interface</span></li>
+                        <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Integration with Python analytics</span></li>
+                    </ul>
+                </div>
+                """, unsafe_allow_html=True)
         
         with tab3:
             # Process - Simple numbered steps
