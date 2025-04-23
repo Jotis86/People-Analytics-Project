@@ -777,130 +777,160 @@ elif menu == "📊 Project Overview":
         st.markdown('<p class="section-header">🎯 Project Conclusions</p>', unsafe_allow_html=True)
         
         # Key Findings with more visual formatting
-        #st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #1E88E5;'>💡 Key Findings</h3>", unsafe_allow_html=True)
-        
+    
         # Two columns for findings to make it more compact
         f_col1, f_col2 = st.columns(2)
         
         with f_col1:
             st.markdown("""
-            ✅ **Employee Retention Factors**
-            - Compensation is a key driver
-            - Management quality matters
-            - Career development opportunities
-            
-            ✅ **Performance Patterns**
-            - Strong correlation with training
-            - Higher investments = better outcomes 
-            - Performance varies by department
-            """)
+            <div style="background-color: #e3f2fd; padding: 15px; border-radius: 10px; border-left: 5px solid #1E88E5; height: 100%;">
+                <h4 style="color: #1E88E5; margin-top: 0;">✅ Employee Retention Factors</h4>
+                <ul style="color: #333; padding-left: 20px; margin-bottom: 5px;">
+                    <li>Compensation is a key driver</li>
+                    <li>Management quality matters</li>
+                    <li>Career development opportunities</li>
+                </ul>
+                
+                <h4 style="color: #1E88E5; margin-top: 15px;">✅ Performance Patterns</h4>
+                <ul style="color: #333; padding-left: 20px; margin-bottom: 0;">
+                    <li>Strong correlation with training</li>
+                    <li>Higher investments = better outcomes</li>
+                    <li>Performance varies by department</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
         
         with f_col2:
             st.markdown("""
-            ✅ **Department-Level Insights**
-            - Significant variations in engagement
-            - Performance differs across teams
-            - Turnover rates vary significantly
-            
-            ✅ **Satisfaction Drivers**
-            - NPS analysis revealed key factors
-            - Work-life balance is critical
-            - Recognition affects engagement
-            """)
-        st.markdown('</div>', unsafe_allow_html=True)
+            <div style="background-color: #e8f5e9; padding: 15px; border-radius: 10px; border-left: 5px solid #43A047; height: 100%;">
+                <h4 style="color: #43A047; margin-top: 0;">✅ Department-Level Insights</h4>
+                <ul style="color: #333; padding-left: 20px; margin-bottom: 5px;">
+                    <li>Significant variations in engagement</li>
+                    <li>Performance differs across teams</li>
+                    <li>Turnover rates vary significantly</li>
+                </ul>
+                
+                <h4 style="color: #43A047; margin-top: 15px;">✅ Satisfaction Drivers</h4>
+                <ul style="color: #333; padding-left: 20px; margin-bottom: 0;">
+                    <li>NPS analysis revealed key factors</li>
+                    <li>Work-life balance is critical</li>
+                    <li>Recognition affects engagement</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Espacio entre secciones
+        st.markdown("<br>", unsafe_allow_html=True)
         
         # Recommendations section with visual indicators
-        #st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #FF5722;'>🚀 Recommendations</h3>", unsafe_allow_html=True)
         
         rec_cols = st.columns(4)
         
         with rec_cols[0]:
             st.markdown("""
-            <div style='text-align: center;'>
-            <span style='font-size: 2.5rem;'>📚</span>
-            <h4>Targeted Training</h4>
-            <p>Increase training in departments with lower performance scores</p>
+            <div style="background-color: #fff3e0; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%; text-align: center;">
+                <div style="background-color: #FF9800; width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem; color: white;">📚</span>
+                </div>
+                <h4 style="color: #FF9800; margin: 10px 0;">Targeted Training</h4>
+                <p style="color: #333; margin: 0;">Increase training in departments with lower performance scores</p>
             </div>
             """, unsafe_allow_html=True)
         
         with rec_cols[1]:
             st.markdown("""
-            <div style='text-align: center;'>
-            <span style='font-size: 2.5rem;'>🔄</span>
-            <h4>Retention Strategy</h4>
-            <p>Focus efforts on departments with high turnover rates</p>
+            <div style="background-color: #e1f5fe; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%; text-align: center;">
+                <div style="background-color: #03A9F4; width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem; color: white;">🔄</span>
+                </div>
+                <h4 style="color: #03A9F4; margin: 10px 0;">Retention Strategy</h4>
+                <p style="color: #333; margin: 0;">Focus efforts on departments with high turnover rates</p>
             </div>
             """, unsafe_allow_html=True)
         
         with rec_cols[2]:
             st.markdown("""
-            <div style='text-align: center;'>
-            <span style='font-size: 2.5rem;'>🌟</span>
-            <h4>Engagement Initiatives</h4>
-            <p>Address low NPS scores with targeted programs</p>
+            <div style="background-color: #f3e5f5; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%; text-align: center;">
+                <div style="background-color: #9C27B0; width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem; color: white;">🌟</span>
+                </div>
+                <h4 style="color: #9C27B0; margin: 10px 0;">Engagement Initiatives</h4>
+                <p style="color: #333; margin: 0;">Address low NPS scores with targeted programs</p>
             </div>
             """, unsafe_allow_html=True)
         
         with rec_cols[3]:
             st.markdown("""
-            <div style='text-align: center;'>
-            <span style='font-size: 2.5rem;'>📊</span>
-            <h4>Continuous Monitoring</h4>
-            <p>Implement ongoing analytics for proactive management</p>
+            <div style="background-color: #e8f5e9; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%; text-align: center;">
+                <div style="background-color: #4CAF50; width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem; color: white;">📊</span>
+                </div>
+                <h4 style="color: #4CAF50; margin: 10px 0;">Continuous Monitoring</h4>
+                <p style="color: #333; margin: 0;">Implement ongoing analytics for proactive management</p>
             </div>
             """, unsafe_allow_html=True)
         
-        st.markdown('</div>', unsafe_allow_html=True)
+        # Espacio entre secciones
+        st.markdown("<br>", unsafe_allow_html=True)
         
         # Future Directions with visual timeline
-        #st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #4CAF50;'>🔮 Future Directions</h3>", unsafe_allow_html=True)
         
         # Progress bar to visualize implementation timeline
-        st.markdown("<p style='text-align: center;'>Implementation Roadmap</p>", unsafe_allow_html=True)
+        st.markdown("<p style='text-align: center; margin-bottom: 15px;'>Implementation Roadmap</p>", unsafe_allow_html=True)
         st.progress(25)
         
         future_cols = st.columns(4)
         
         with future_cols[0]:
             st.markdown("""
-            <div style='text-align: center; border-top: 4px solid #4CAF50;'>
-            <p style='color: #4CAF50; font-weight: bold;'>Phase 1</p>
-            <span style='font-size: 2rem;'>🔄</span>
-            <p>Data Integration & Centralization Platform</p>
+            <div style="background-color: #e8f5e9; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%; text-align: center;">
+                <div style="height: 5px; background-color: #4CAF50; margin: -15px -15px 15px -15px; border-radius: 10px 10px 0 0;"></div>
+                <p style="color: #4CAF50; font-weight: bold; margin-bottom: 10px;">Phase 1</p>
+                <div style="background-color: rgba(76, 175, 80, 0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem;">🔄</span>
+                </div>
+                <p style="color: #333; margin: 0; font-size: 14px;">Data Integration & Centralization Platform</p>
             </div>
             """, unsafe_allow_html=True)
         
         with future_cols[1]:
             st.markdown("""
-            <div style='text-align: center; border-top: 4px solid #2196F3;'>
-            <p style='color: #2196F3; font-weight: bold;'>Phase 2</p>
-            <span style='font-size: 2rem;'>⏱️</span>
-            <p>Real-Time Analytics dashboards</p>
+            <div style="background-color: #e3f2fd; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%; text-align: center;">
+                <div style="height: 5px; background-color: #2196F3; margin: -15px -15px 15px -15px; border-radius: 10px 10px 0 0;"></div>
+                <p style="color: #2196F3; font-weight: bold; margin-bottom: 10px;">Phase 2</p>
+                <div style="background-color: rgba(33, 150, 243, 0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem;">⏱️</span>
+                </div>
+                <p style="color: #333; margin: 0; font-size: 14px;">Real-Time Analytics Dashboards</p>
             </div>
             """, unsafe_allow_html=True)
         
         with future_cols[2]:
             st.markdown("""
-            <div style='text-align: center; border-top: 4px solid #FFC107;'>
-            <p style='color: #FFC107; font-weight: bold;'>Phase 3</p>
-            <span style='font-size: 2rem;'>🔌</span>
-            <p>Integration with HRIS systems</p>
+            <div style="background-color: #fff8e1; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%; text-align: center;">
+                <div style="height: 5px; background-color: #FFC107; margin: -15px -15px 15px -15px; border-radius: 10px 10px 0 0;"></div>
+                <p style="color: #FFC107; font-weight: bold; margin-bottom: 10px;">Phase 3</p>
+                <div style="background-color: rgba(255, 193, 7, 0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem;">🔌</span>
+                </div>
+                <p style="color: #333; margin: 0; font-size: 14px;">Integration with HRIS Systems</p>
             </div>
             """, unsafe_allow_html=True)
         
         with future_cols[3]:
             st.markdown("""
-            <div style='text-align: center; border-top: 4px solid #9C27B0;'>
-            <p style='color: #9C27B0; font-weight: bold;'>Phase 4</p>
-            <span style='font-size: 2rem;'>📈</span>
-            <p>Expanded Metrics for deeper insights</p>
+            <div style="background-color: #f3e5f5; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%; text-align: center;">
+                <div style="height: 5px; background-color: #9C27B0; margin: -15px -15px 15px -15px; border-radius: 10px 10px 0 0;"></div>
+                <p style="color: #9C27B0; font-weight: bold; margin-bottom: 10px;">Phase 4</p>
+                <div style="background-color: rgba(156, 39, 176, 0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem;">📈</span>
+                </div>
+                <p style="color: #333; margin: 0; font-size: 14px;">Expanded Metrics for Deeper Insights</p>
             </div>
             """, unsafe_allow_html=True)
-        
-        st.markdown('</div>', unsafe_allow_html=True)
         
         # Signature
         st.markdown("""
