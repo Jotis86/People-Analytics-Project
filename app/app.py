@@ -82,7 +82,7 @@ st.markdown('<p class="main-header">People Analytics Project</p>', unsafe_allow_
 # Mostrar imagen principal con tamaño controlado
 st.image(principal_image_path, use_container_width=True)
 
-# Menú de navegación (mejorado)
+# Menú de navegación (mejorado y consolidado)
 with st.sidebar:
     st.sidebar.image(menu_image_path, use_container_width=True)
     st.sidebar.markdown("## 📋 Navigation Menu")
@@ -91,12 +91,9 @@ with st.sidebar:
         "Select a section:",
         [
             "🏠 Home & Objectives", 
-            "📊 Project Overview", 
-            "📈 Results",
+            "📊 Project Overview",
             "📊 Interactive Visualizations", 
-            "📊 Power BI Dashboards", 
-            "📏 Key Metrics", 
-            "🎯 Conclusions"
+            "📊 Power BI Dashboards"
         ]
     )
     
@@ -145,95 +142,277 @@ if menu == "🏠 Home & Objectives":
 elif menu == "📊 Project Overview":
     st.markdown('<p class="section-header">📊 Project Overview</p>', unsafe_allow_html=True)
     
-    # Display project diagram
-    st.image(dashboard_image_path, use_container_width=True)
+    # Create a submenu within Project Overview
+    overview_submenu = st.radio(
+        "Select overview section:",
+        ["Project Structure", "Results", "Key Metrics", "Conclusions"],
+        horizontal=True
+    )
     
-    # Use tabs for better organization
-    tab1, tab2, tab3 = st.tabs(["Functionality", "Tools Used", "Process"])
-    
-    with tab1:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("""
-        ### Key Functionality
+    if overview_submenu == "Project Structure":
+        # Display project diagram
+        st.image(dashboard_image_path, use_container_width=True)
         
-        - 📈 **Interactive Power BI visualizations** with customizable filters
-        - 📊 **Comprehensive KPI tracking** for HR metrics
-        - 📅 **Time-series analysis** to identify workforce trends
-        - 📊 **Three specialized dashboards** for different analysis perspectives
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
+        # Use tabs for better organization
+        tab1, tab2, tab3 = st.tabs(["Functionality", "Tools Used", "Process"])
+        
+        with tab1:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("""
+            ### Key Functionality
+            
+            - 📈 **Interactive Power BI visualizations** with customizable filters
+            - 📊 **Comprehensive KPI tracking** for HR metrics
+            - 📅 **Time-series analysis** to identify workforce trends
+            - 📊 **Three specialized dashboards** for different analysis perspectives
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with tab2:
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown('<div class="card">', unsafe_allow_html=True)
+                st.markdown("""
+                ### Power BI
+                
+                - 📊 Interactive dashboards
+                - 📈 Customizable visuals
+                - 🔄 Real-time filtering
+                - 🔗 Data relationships
+                """)
+                st.markdown('</div>', unsafe_allow_html=True)
+            
+            with col2:
+                st.markdown('<div class="card">', unsafe_allow_html=True)
+                st.markdown("""
+                ### Python Analysis
+                
+                - 🧹 Pandas data cleaning
+                - 📊 Matplotlib visualization
+                - 📈 Seaborn statistical plots
+                - 🔢 NumPy calculations
+                """)
+                st.markdown('</div>', unsafe_allow_html=True)
+        
+        with tab3:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("""
+            ### Development Process
+            
+            1. **Data Extraction** from HR systems
+            2. **Cleaning & Transformation** to prepare for analysis
+            3. **Exploratory Analysis** to identify patterns
+            4. **Dashboard Creation** for interactive exploration
+            5. **Metric Development** to track key indicators
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
     
-    with tab2:
+    elif overview_submenu == "Results":
+        st.markdown('<p class="section-header">📈 Key Results</p>', unsafe_allow_html=True)
+        
         col1, col2 = st.columns(2)
         
         with col1:
             st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("""
-            ### Power BI
+            ### Power BI Analysis
             
-            - 📊 Interactive dashboards
-            - 📈 Customizable visuals
-            - 🔄 Real-time filtering
-            - 🔗 Data relationships
+            - 📊 **Custom KPI calculations** for retention, satisfaction and performance
+            - 📏 **DAX calculated measures** for advanced metric analysis
+            - ➕ **Calculated columns** for enhanced categorization
+            - 🔍 **Dynamic filtering** for focused analysis
             """)
             st.markdown('</div>', unsafe_allow_html=True)
         
         with col2:
             st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("""
-            ### Python Analysis
+            ### Python Insights
             
-            - 🧹 Pandas data cleaning
-            - 📊 Matplotlib visualization
-            - 📈 Seaborn statistical plots
-            - 🔢 NumPy calculations
+            - 🧹 **Comprehensive data cleaning** methodologies
+            - 📊 **Statistical analysis** of key workforce variables
+            - 📈 **Correlation analysis** between performance factors
+            - 🔍 **Outlier detection** in salary and performance metrics
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Show sample visualization
+        st.image(dashboard_image_path, caption="Sample dashboard visualization", use_container_width=True)
+    
+    elif overview_submenu == "Key Metrics":
+        st.markdown('<p class="section-header">📏 Key HR Metrics</p>', unsafe_allow_html=True)
+        
+        # Display metrics in cards
+        metric_col1, metric_col2, metric_col3 = st.columns(3)
+        
+        with metric_col1:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### 🔄 Turnover Rate")
+            
+            if df is not None:
+                turnover_rate = df['Rotación Externa'].mean() * 100
+                st.markdown(f'<p class="metric-value">{turnover_rate:.1f}%</p>', unsafe_allow_html=True)
+            else:
+                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                
+            st.markdown("""
+            **Definition**: Percentage of employees who left during a period
+            
+            **Formula**: (Employees who left / Total employees) × 100
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with metric_col2:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### 📈 NPS Score")
+            
+            if df is not None:
+                avg_nps = df['NPS'].mean()
+                st.markdown(f'<p class="metric-value">{avg_nps:.1f}</p>', unsafe_allow_html=True)
+            else:
+                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                
+            st.markdown("""
+            **Definition**: Net Promoter Score measuring employee loyalty
+            
+            **Formula**: Promoters % - Detractors %
+            
+            **Scale**: 1-10, where 9-10: Promoters, 7-8: Passive, 1-6: Detractors
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with metric_col3:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### 📉 Absenteeism Rate")
+            
+            if df is not None:
+                # Calculate average days lost per employee
+                avg_days_lost = df['Días de Trabajo Perdido (Abs)'].mean()
+                st.markdown(f'<p class="metric-value">{avg_days_lost:.1f} days</p>', unsafe_allow_html=True)
+            else:
+                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                
+            st.markdown("""
+            **Definition**: Average work days lost per employee
+            
+            **Impact**: High absenteeism can indicate workplace issues or job dissatisfaction
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Second row of metrics
+        metric_col4, metric_col5, metric_col6 = st.columns(3)
+        
+        with metric_col4:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### 📊 Performance Score")
+            
+            if df is not None:
+                avg_performance = df['Evaluación Desempeño'].mean()
+                st.markdown(f'<p class="metric-value">{avg_performance:.1f}/10</p>', unsafe_allow_html=True)
+            else:
+                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                
+            st.markdown("""
+            **Definition**: Average performance evaluation score
+            
+            **Scale**: 1-10, with 10 being the highest performance
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with metric_col5:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### ⏱️ Training Hours")
+            
+            if df is not None:
+                avg_training = df['Horas de formación recibidas'].mean()
+                st.markdown(f'<p class="metric-value">{avg_training:.1f} hours</p>', unsafe_allow_html=True)
+            else:
+                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                
+            st.markdown("""
+            **Definition**: Average training hours per employee
+            
+            **Impact**: Investment in employee development and skill enhancement
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with metric_col6:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### 💰 Salary Growth")
+            
+            if df is not None:
+                avg_salary_diff = df['Diferencia Salario'].mean()
+                pct_with_increase = (df['Diferencia Salario'] > 0).mean() * 100
+                st.markdown(f'<p class="metric-value">€{avg_salary_diff:.0f}</p>', unsafe_allow_html=True)
+                st.markdown(f'<p class="metric-label">{pct_with_increase:.1f}% received an increase</p>', unsafe_allow_html=True)
+            else:
+                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                
+            st.markdown("""
+            **Definition**: Average salary increase in 2020
+            
+            **Impact**: Indicator of compensation strategy and employee value
             """)
             st.markdown('</div>', unsafe_allow_html=True)
     
-    with tab3:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("""
-        ### Development Process
+    elif overview_submenu == "Conclusions":
+        st.markdown('<p class="section-header">🎯 Project Conclusions</p>', unsafe_allow_html=True)
         
-        1. **Data Extraction** from HR systems
-        2. **Cleaning & Transformation** to prepare for analysis
-        3. **Exploratory Analysis** to identify patterns
-        4. **Dashboard Creation** for interactive exploration
-        5. **Metric Development** to track key indicators
+        # Use columns for layout
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### Key Findings")
+            st.markdown("""
+            The People Analytics project has revealed several important insights:
+            
+            - **Employee Retention Factors**: We identified key drivers of retention, including compensation, management quality, and career development opportunities.
+            
+            - **Performance Patterns**: Analysis revealed strong correlations between training investment and performance outcomes.
+            
+            - **Department-Level Insights**: Significant variations in engagement, performance, and turnover were observed across departments.
+            
+            - **Satisfaction Drivers**: NPS analysis highlighted crucial factors affecting employee satisfaction and engagement.
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        with col2:
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown("### Recommendations")
+            st.markdown("""
+            Based on our analysis:
+            
+            1. **Targeted Training**: Increase training in departments with lower performance scores
+            
+            2. **Retention Strategy**: Focus on departments with high turnover rates
+            
+            3. **Engagement Initiatives**: Address low NPS scores with targeted engagement programs
+            
+            4. **Continuous Monitoring**: Implement ongoing analytics for proactive management
+            """)
+            st.markdown('</div>', unsafe_allow_html=True)
+        
+        # Final thoughts
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        st.markdown("### Future Directions")
+        st.markdown("""
+        To further enhance people analytics capabilities:
+        
+        - **Predictive Models**: Develop predictive models for turnover risk and performance outcomes
+        - **Real-Time Dashboards**: Implement real-time analytics for immediate insights
+        - **Integration with HRIS**: Seamlessly connect with HR information systems
+        - **Expanded Metrics**: Include additional metrics such as recruitment efficiency and culture indicators
         """)
         st.markdown('</div>', unsafe_allow_html=True)
-
-elif menu == "📈 Results":
-    st.markdown('<p class="section-header">📈 Key Results</p>', unsafe_allow_html=True)
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("""
-        ### Power BI Analysis
         
-        - 📊 **Custom KPI calculations** for retention, satisfaction and performance
-        - 📏 **DAX calculated measures** for advanced metric analysis
-        - ➕ **Calculated columns** for enhanced categorization
-        - 🔍 **Dynamic filtering** for focused analysis
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
+        # Signature
         st.markdown("""
-        ### Python Insights
-        
-        - 🧹 **Comprehensive data cleaning** methodologies
-        - 📊 **Statistical analysis** of key workforce variables
-        - 📈 **Correlation analysis** between performance factors
-        - 🔍 **Outlier detection** in salary and performance metrics
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Show sample visualization
-    st.image(dashboard_image_path, caption="Sample dashboard visualization", use_container_width=True)
+        <div style="text-align: center; margin-top: 30px; color: #555;">
+        <p>Project developed by Juan Duran Bon</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 elif menu == "📊 Interactive Visualizations":
     st.markdown('<p class="section-header">📊 Interactive Visualizations</p>', unsafe_allow_html=True)
@@ -633,177 +812,3 @@ elif menu == "📊 Power BI Dashboards":
     # Dashboard demo video
     st.subheader("Interactive Dashboard Demo")
     st.video(clip_video_path)
-
-elif menu == "📏 Key Metrics":
-    st.markdown('<p class="section-header">📏 Key HR Metrics</p>', unsafe_allow_html=True)
-    
-    # Display metrics in cards
-    metric_col1, metric_col2, metric_col3 = st.columns(3)
-    
-    with metric_col1:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### 🔄 Turnover Rate")
-        
-        if df is not None:
-            turnover_rate = df['Rotación Externa'].mean() * 100
-            st.markdown(f'<p class="metric-value">{turnover_rate:.1f}%</p>', unsafe_allow_html=True)
-        else:
-            st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
-            
-        st.markdown("""
-        **Definition**: Percentage of employees who left during a period
-        
-        **Formula**: (Employees who left / Total employees) × 100
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with metric_col2:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### 📈 NPS Score")
-        
-        if df is not None:
-            avg_nps = df['NPS'].mean()
-            st.markdown(f'<p class="metric-value">{avg_nps:.1f}</p>', unsafe_allow_html=True)
-        else:
-            st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
-            
-        st.markdown("""
-        **Definition**: Net Promoter Score measuring employee loyalty
-        
-        **Formula**: Promoters % - Detractors %
-        
-        **Scale**: 1-10, where 9-10: Promoters, 7-8: Passive, 1-6: Detractors
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with metric_col3:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### 📉 Absenteeism Rate")
-        
-        if df is not None:
-            # Calculate average days lost per employee
-            avg_days_lost = df['Días de Trabajo Perdido (Abs)'].mean()
-            st.markdown(f'<p class="metric-value">{avg_days_lost:.1f} days</p>', unsafe_allow_html=True)
-        else:
-            st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
-            
-        st.markdown("""
-        **Definition**: Average work days lost per employee
-        
-        **Impact**: High absenteeism can indicate workplace issues or job dissatisfaction
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Second row of metrics
-    metric_col4, metric_col5, metric_col6 = st.columns(3)
-    
-    with metric_col4:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### 📊 Performance Score")
-        
-        if df is not None:
-            avg_performance = df['Evaluación Desempeño'].mean()
-            st.markdown(f'<p class="metric-value">{avg_performance:.1f}/10</p>', unsafe_allow_html=True)
-        else:
-            st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
-            
-        st.markdown("""
-        **Definition**: Average performance evaluation score
-        
-        **Scale**: 1-10, with 10 being the highest performance
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with metric_col5:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### ⏱️ Training Hours")
-        
-        if df is not None:
-            avg_training = df['Horas de formación recibidas'].mean()
-            st.markdown(f'<p class="metric-value">{avg_training:.1f} hours</p>', unsafe_allow_html=True)
-        else:
-            st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
-            
-        st.markdown("""
-        **Definition**: Average training hours per employee
-        
-        **Impact**: Investment in employee development and skill enhancement
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with metric_col6:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### 💰 Salary Growth")
-        
-        if df is not None:
-            avg_salary_diff = df['Diferencia Salario'].mean()
-            pct_with_increase = (df['Diferencia Salario'] > 0).mean() * 100
-            st.markdown(f'<p class="metric-value">€{avg_salary_diff:.0f}</p>', unsafe_allow_html=True)
-            st.markdown(f'<p class="metric-label">{pct_with_increase:.1f}% received an increase</p>', unsafe_allow_html=True)
-        else:
-            st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
-            
-        st.markdown("""
-        **Definition**: Average salary increase in 2020
-        
-        **Impact**: Indicator of compensation strategy and employee value
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-
-elif menu == "🎯 Conclusions":
-    st.markdown('<p class="section-header">🎯 Project Conclusions</p>', unsafe_allow_html=True)
-    
-    # Use columns for layout
-    col1, col2 = st.columns([2, 1])
-    
-    with col1:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### Key Findings")
-        st.markdown("""
-        The People Analytics project has revealed several important insights:
-        
-        - **Employee Retention Factors**: We identified key drivers of retention, including compensation, management quality, and career development opportunities.
-        
-        - **Performance Patterns**: Analysis revealed strong correlations between training investment and performance outcomes.
-        
-        - **Department-Level Insights**: Significant variations in engagement, performance, and turnover were observed across departments.
-        
-        - **Satisfaction Drivers**: NPS analysis highlighted crucial factors affecting employee satisfaction and engagement.
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### Recommendations")
-        st.markdown("""
-        Based on our analysis:
-        
-        1. **Targeted Training**: Increase training in departments with lower performance scores
-        
-        2. **Retention Strategy**: Focus on departments with high turnover rates
-        
-        3. **Engagement Initiatives**: Address low NPS scores with targeted engagement programs
-        
-        4. **Continuous Monitoring**: Implement ongoing analytics for proactive management
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Final thoughts
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-    st.markdown("### Future Directions")
-    st.markdown("""
-    To further enhance people analytics capabilities:
-    
-    - **Predictive Models**: Develop predictive models for turnover risk and performance outcomes
-    - **Real-Time Dashboards**: Implement real-time analytics for immediate insights
-    - **Integration with HRIS**: Seamlessly connect with HR information systems
-    - **Expanded Metrics**: Include additional metrics such as recruitment efficiency and culture indicators
-    """)
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Signature
-    st.markdown("""
-    <div style="text-align: center; margin-top: 30px; color: #555;">
-    <p>Project developed by Juan Duran Bon</p>
-    </div>
-    """, unsafe_allow_html=True)
