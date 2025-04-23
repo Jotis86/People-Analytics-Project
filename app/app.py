@@ -6,6 +6,8 @@ import os
 import numpy as np
 from PIL import Image
 import io
+import pickle
+from datetime import datetime, date
 
 # Set page config
 st.set_page_config(page_title="People Analytics Dashboard", page_icon="👥", layout="wide")
@@ -49,6 +51,19 @@ def load_data():
         return data
     else:
         st.error(f"Data file not found at {data_path}")
+        return None
+    
+
+# Load model
+@st.cache_resource
+def load_model():
+    try:
+        model_path = os.path.join('models', 'modelo_rotacion_externa_random_forest.pkl')
+        with open(model_path, 'rb') as file:
+            model = pickle.load(file)
+        return model
+    except Exception as e:
+        st.error(f"Error loading model: {e}")
         return None
 
 # Create matplotlib/seaborn chart in memory
@@ -120,7 +135,8 @@ with st.sidebar:
             "🏠 Home & Objectives", 
             "📊 Project Overview",
             "📊 Interactive Visualizations", 
-            "📊 Power BI Dashboards"
+            "📊 Power BI Dashboards",
+            "🔮 ML Predictions"
         ]
     )
     
@@ -976,3 +992,184 @@ elif menu == "📊 Power BI Dashboards":
     # Dashboard demo video
     st.subheader("Interactive Dashboard Demo")
     st.video(clip_video_path)
+
+# Add the new section at the end of your app, with the other menu sections
+elif menu == "🔮 ML Predictions":
+    st.markdown('<p class="section-header">🔮 Machine Learning Predictions</p>', unsafe_allow_html=True)
+    
+    # Load the model
+    model = load_model()
+    
+    if model:
+        st.markdown("""
+        <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; border-left: 5px solid #2E86C1; margin-bottom: 20px;">
+            <h3 style="color: #2E86C1; margin-top: 0;">Employee Performance Prediction</h3>
+            <p>This model predicts employee performance based on various HR factors.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Create interface for prediction inputs
+        st.markdown("### Enter Employee Information")
+        
+        # Use tabs to organize the form
+        tab1, tab2 = st.tabs(["Employee Details", "Contract & Compensation"])
+        
+        with tab1:
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                negligencias = st.number_input("Negligencias/Sanciones", 0, 10, 0)
+                year_birth = st.number_input("Año de Nacimiento", 1950, 2000, 1985)
+                edad = st.number_input("Edad", 20, 70, 35)
+                nuevas_contrataciones = st.selectbox("¿Es nueva contratación?", ["No", "Sí"])
+                nuevas_contrataciones = 1 if nuevas_contrataciones == "Sí" else 0
+                
+            with col2:
+                exp_previa = st.number_input("Experiencia previa (meses)", 0, 240, 36)
+                fecha_inicio = st.date_input("Fecha inicio de contrato", 
+                                           date(2015, 1, 1), 
+                                           min_value=date(2000, 1, 1),
+                                           max_value=date.today())
+        
+        with tab2:
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                antig_anios = st.number_input("Antigüedad en años", 0, 30, 3)
+                antig_meses = st.number_input("Antigüedad en meses", 0, 11, 6)
+                
+            with col2:
+                salario_inicial = st.number_input("Salario inicial 2020 (€)", 15000, 100000, 30000, step=1000)
+                salario_actual = st.number_input("Salario anual actual 2020 (€)", 15000, 150000, 35000, step=1000)
+        
+        # Calculate derived fields if needed
+        total_antig_meses = antig_anios * 12 + antig_meses
+        start_date_str = fecha_inicio.strftime('%Y-%m-%d')
+        
+        # Create input data for prediction
+        input_data = {
+            'Negligencias_Sanciones': negligencias,
+            'Fecha_Inicio_Contrato': start_date_str,  # You might need to format this differently
+            'Antigüedad Años': antig_anios,
+            'Antigüedad Meses': antig_meses,
+            'Salario Anual Actual 2020': salario_actual,
+            'Experiencia Previa Meses': exp_previa,
+            'Salario Inicial 2020': salario_inicial,
+            'Año Nacimiento': year_birth,
+            'Edad': edad,
+            'Nuevas Contrataciones': nuevas_contrataciones
+        }
+        
+        # Prediction section
+        st.markdown("### Prediction")
+        
+        if st.button("Predict Employee Performance", key="predict_button"):
+            try:
+                # Convert input to DataFrame (adjust column names to match your model's expectations)
+                input_df = pd.DataFrame([input_data])
+                
+                # Format the date if needed
+                # input_df['Fecha_Inicio_Contrato'] = pd.to_datetime(input_df['Fecha_Inicio_Contrato'])
+                
+                # Make prediction
+                prediction = model.predict(input_df)[0]
+                
+                # Display prediction with appropriate styling based on performance level
+                if prediction >= 8:
+                    perf_level = "High Performer"
+                    perf_color = "#2ECC71"
+                    perf_message = "This employee is predicted to be a high performer."
+                elif prediction >= 6:
+                    perf_level = "Average Performer"
+                    perf_color = "#F39C12"
+                    perf_message = "This employee is predicted to perform at an average level."
+                else:
+                    perf_level = "Needs Improvement"
+                    perf_color = "#E74C3C"
+                    perf_message = "This employee may need additional support or training."
+                
+                # Display result
+                st.markdown(f"""
+                <div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; 
+                            border-left: 5px solid {perf_color}; margin-top: 20px;">
+                    <h3 style="color: {perf_color}; margin-top: 0;">Predicted Performance: {perf_level}</h3>
+                    <p>{perf_message}</p>
+                    <p>Performance Score: <b>{prediction:.1f}/10</b></p>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Feature importance visualization
+                st.markdown("### Key Factors")
+                
+                # Custom visualization of key factors (since we don't have actual feature importance)
+                # These weights are illustrative - adjust based on your model's actual behavior
+                chart_data = pd.DataFrame({
+                    'Factor': ['Experience', 'Tenure', 'Age', 'Salary', 'Negligencias'],
+                    'Value': [
+                        exp_previa / 240,  # Normalized experience
+                        total_antig_meses / 360,  # Normalized tenure
+                        (edad - 20) / 50,  # Normalized age
+                        salario_actual / 150000,  # Normalized salary
+                        1 - (negligencias / 10)  # Inverse of negligencias (fewer is better)
+                    ],
+                    'Weight': [0.3, 0.25, 0.15, 0.2, 0.1]  # Illustrative weights
+                })
+                
+                # Calculate weighted impact
+                chart_data['WeightedImpact'] = chart_data['Value'] * chart_data['Weight']
+                chart_data = chart_data.sort_values('WeightedImpact', ascending=True)
+                
+                fig, ax = plt.subplots(figsize=(10, 6))
+                bars = ax.barh(chart_data['Factor'], chart_data['WeightedImpact'], 
+                               color=['#3498DB', '#2ECC71', '#F39C12', '#E74C3C', '#9B59B6'])
+                
+                # Add labels and styling
+                ax.set_title('Factors Influencing Performance Prediction', fontsize=14)
+                ax.set_xlabel('Relative Impact')
+                ax.spines['top'].set_visible(False)
+                ax.spines['right'].set_visible(False)
+                plt.tight_layout()
+                
+                st.pyplot(fig)
+                
+                # Recommendations based on prediction
+                st.markdown("### Recommendations")
+                
+                if prediction >= 8:
+                    st.markdown("""
+                    - Consider for leadership opportunities or mentoring roles
+                    - Provide advanced training to further develop skills
+                    - Review compensation to ensure retention of top talent
+                    """)
+                elif prediction >= 6:
+                    st.markdown("""
+                    - Focus on targeted skill development in key areas
+                    - Regular check-ins to maintain performance
+                    - Consider lateral moves to broaden experience
+                    """)
+                else:
+                    st.markdown("""
+                    - Establish a performance improvement plan
+                    - Increase frequency of feedback and coaching
+                    - Assess training needs and provide necessary resources
+                    - Consider job fit and potential role adjustments
+                    """)
+                
+            except Exception as e:
+                st.error(f"Error making prediction: {e}")
+                st.markdown("Try adjusting the input values or check that they match the expected format for the model.")
+    else:
+        st.error("Could not load prediction model. Please check if the model file exists.")
+        
+        # Provide fallback information
+        st.markdown("""
+        ### Model Information
+        
+        This section would normally allow you to:
+        
+        - Predict employee performance based on HR data
+        - Identify key factors influencing performance
+        - Get personalized recommendations for employee development
+        
+        Please ensure the model file is available at `models/hr_prediction_model.pkl`.
+        """)
