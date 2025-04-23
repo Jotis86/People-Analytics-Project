@@ -4,3 +4,4 @@ seaborn
 streamlit
 numpy
 Pillow
+scikit-learn
