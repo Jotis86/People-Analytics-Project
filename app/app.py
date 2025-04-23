@@ -136,23 +136,22 @@ if menu == "🏠 Home & Objectives":
     feature_cols = st.columns(5)
     
     features = [
-        {"icon": "🔄", "title": "Retention Analysis", "color": "#3498DB", "detail": "Identify turnover patterns"},
-        {"icon": "📈", "title": "Performance Insights", "color": "#9B59B6", "detail": "Analyze evaluation metrics"},
-        {"icon": "😊", "title": "Satisfaction Metrics", "color": "#2ECC71", "detail": "Track engagement and NPS"},
-        {"icon": "📚", "title": "Training Impact", "color": "#F39C12", "detail": "Measure development progress"},
-        {"icon": "📉", "title": "Absenteeism", "color": "#E74C3C", "detail": "Monitor attendance patterns"}
+        {"icon": "🔄", "title": "Retention Analysis", "color": "#3498DB"},
+        {"icon": "📈", "title": "Performance Insights", "color": "#9B59B6"},
+        {"icon": "😊", "title": "Satisfaction Metrics", "color": "#2ECC71"},
+        {"icon": "📚", "title": "Training Impact", "color": "#F39C12"},
+        {"icon": "📉", "title": "Absenteeism", "color": "#E74C3C"}
     ]
     
     for i, col in enumerate(feature_cols):
         with col:
             feature = features[i]
             st.markdown(f"""
-            <div style="background-color: white; border-radius: 10px; padding: 15px; height: 170px; text-align: center; 
+            <div style="background-color: white; border-radius: 10px; padding: 15px; height: 140px; text-align: center; 
                         border-top: 5px solid {feature['color']}; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                        display: flex; flex-direction: column;">
-                <div style="font-size: 2rem; margin-bottom: 10px;">{feature['icon']}</div>
-                <h4 style="color: {feature['color']}; margin-bottom: 8px; font-size: 15px;">{feature['title']}</h4>
-                <p style="font-size: 10px; color: #333; margin-bottom: 0; overflow: hidden; word-wrap: break-word;">{feature['detail']}</p>
+                        display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;">{feature['icon']}</div>
+                <h4 style="color: {feature['color']}; margin: 0; font-size: 16px;">{feature['title']}</h4>
             </div>
             """, unsafe_allow_html=True)
     
