@@ -611,118 +611,167 @@ elif menu == "📊 Project Overview":
     elif overview_submenu == "Key Metrics":
         st.markdown('<p class="section-header">📏 Key HR Metrics</p>', unsafe_allow_html=True)
         
-        # Display metrics in cards
+        # Display metrics in cards - Primera fila
         metric_col1, metric_col2, metric_col3 = st.columns(3)
         
         with metric_col1:
-            #st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### 🔄 Turnover Rate")
+            st.markdown("""
+            <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%;">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <span style="font-size: 36px;">🔄</span>
+                    <h3 style="margin: 5px 0; color: #3498DB;">Turnover Rate</h3>
+                </div>
+                <div style="text-align: center; margin: 15px 0;">
+            """, unsafe_allow_html=True)
             
             if df is not None:
                 turnover_rate = df['Rotación Externa'].mean() * 100
-                st.markdown(f'<p class="metric-value">{turnover_rate:.1f}%</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="font-size: 28px; font-weight: bold; margin: 0; color: #3498DB;">{turnover_rate:.1f}%</p>', unsafe_allow_html=True)
             else:
-                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                st.markdown('<p style="font-size: 28px; font-weight: bold; margin: 0; color: #3498DB;">--</p>', unsafe_allow_html=True)
                 
             st.markdown("""
-            **Definition**: Percentage of employees who left during a period
-            
-            **Formula**: (Employees who left / Total employees) × 100
-            """)
-            st.markdown('</div>', unsafe_allow_html=True)
+                </div>
+                <div style="margin-top: 15px; color: #333;">
+                    <p style="margin: 5px 0;"><strong>Definition:</strong> Percentage of employees who left during a period</p>
+                    <p style="margin: 5px 0;"><strong>Formula:</strong> (Employees who left / Total employees) × 100</p>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
         
         with metric_col2:
-            #st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### 📈 NPS Score")
+            st.markdown("""
+            <div style="background-color: #f8f5ff; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%;">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <span style="font-size: 36px;">📈</span>
+                    <h3 style="margin: 5px 0; color: #9B59B6;">NPS Score</h3>
+                </div>
+                <div style="text-align: center; margin: 15px 0;">
+            """, unsafe_allow_html=True)
             
             if df is not None:
                 avg_nps = df['NPS'].mean()
-                st.markdown(f'<p class="metric-value">{avg_nps:.1f}</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="font-size: 28px; font-weight: bold; margin: 0; color: #9B59B6;">{avg_nps:.1f}</p>', unsafe_allow_html=True)
             else:
-                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                st.markdown('<p style="font-size: 28px; font-weight: bold; margin: 0; color: #9B59B6;">--</p>', unsafe_allow_html=True)
                 
             st.markdown("""
-            **Definition**: Net Promoter Score measuring employee loyalty
-            
-            **Formula**: Promoters % - Detractors %
-            
-            **Scale**: 1-10, where 9-10: Promoters, 7-8: Passive, 1-6: Detractors
-            """)
-            st.markdown('</div>', unsafe_allow_html=True)
+                </div>
+                <div style="margin-top: 15px; color: #333;">
+                    <p style="margin: 5px 0;"><strong>Definition:</strong> Net Promoter Score measuring employee loyalty</p>
+                    <p style="margin: 5px 0;"><strong>Formula:</strong> Promoters % - Detractors %</p>
+                    <p style="margin: 5px 0;"><strong>Scale:</strong> 1-10, where 9-10: Promoters, 7-8: Passive, 1-6: Detractors</p>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
         
         with metric_col3:
-            #st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### 📉 Absenteeism")
+            st.markdown("""
+            <div style="background-color: #f5fff9; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%;">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <span style="font-size: 36px;">📉</span>
+                    <h3 style="margin: 5px 0; color: #2ECC71;">Absenteeism</h3>
+                </div>
+                <div style="text-align: center; margin: 15px 0;">
+            """, unsafe_allow_html=True)
             
             if df is not None:
-                # Calculate average days lost per employee
                 avg_days_lost = df['Días de Trabajo Perdido (Abs)'].mean()
-                st.markdown(f'<p class="metric-value">{avg_days_lost:.1f} days</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="font-size: 28px; font-weight: bold; margin: 0; color: #2ECC71;">{avg_days_lost:.1f} days</p>', unsafe_allow_html=True)
             else:
-                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                st.markdown('<p style="font-size: 28px; font-weight: bold; margin: 0; color: #2ECC71;">--</p>', unsafe_allow_html=True)
                 
             st.markdown("""
-            **Definition**: Average work days lost per employee
-            
-            **Impact**: High absenteeism can indicate workplace issues or job dissatisfaction
-            """)
-            st.markdown('</div>', unsafe_allow_html=True)
+                </div>
+                <div style="margin-top: 15px; color: #333;">
+                    <p style="margin: 5px 0;"><strong>Definition:</strong> Average work days lost per employee</p>
+                    <p style="margin: 5px 0;"><strong>Impact:</strong> High absenteeism can indicate workplace issues or job dissatisfaction</p>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
         
-        # Second row of metrics
+        # Pequeño espacio entre filas
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Segunda fila de métricas
         metric_col4, metric_col5, metric_col6 = st.columns(3)
         
         with metric_col4:
-            #st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### 📊 Performance")
+            st.markdown("""
+            <div style="background-color: #fff9f5; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%;">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <span style="font-size: 36px;">📊</span>
+                    <h3 style="margin: 5px 0; color: #E74C3C;">Performance</h3>
+                </div>
+                <div style="text-align: center; margin: 15px 0;">
+            """, unsafe_allow_html=True)
             
             if df is not None:
                 avg_performance = df['Evaluación Desempeño'].mean()
-                st.markdown(f'<p class="metric-value">{avg_performance:.1f}/10</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="font-size: 28px; font-weight: bold; margin: 0; color: #E74C3C;">{avg_performance:.1f}/10</p>', unsafe_allow_html=True)
             else:
-                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                st.markdown('<p style="font-size: 28px; font-weight: bold; margin: 0; color: #E74C3C;">--</p>', unsafe_allow_html=True)
                 
             st.markdown("""
-            **Definition**: Average performance evaluation score
-            
-            **Scale**: 1-10, with 10 being the highest performance
-            """)
-            st.markdown('</div>', unsafe_allow_html=True)
+                </div>
+                <div style="margin-top: 15px; color: #333;">
+                    <p style="margin: 5px 0;"><strong>Definition:</strong> Average performance evaluation score</p>
+                    <p style="margin: 5px 0;"><strong>Scale:</strong> 1-10, with 10 being the highest performance</p>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
         
         with metric_col5:
-            #st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### ⏱️ Training Hours")
+            st.markdown("""
+            <div style="background-color: #f5f5ff; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%;">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <span style="font-size: 36px;">⏱️</span>
+                    <h3 style="margin: 5px 0; color: #3949AB;">Training Hours</h3>
+                </div>
+                <div style="text-align: center; margin: 15px 0;">
+            """, unsafe_allow_html=True)
             
             if df is not None:
                 avg_training = df['Horas de formación recibidas'].mean()
-                st.markdown(f'<p class="metric-value">{avg_training:.1f} hours</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="font-size: 28px; font-weight: bold; margin: 0; color: #3949AB;">{avg_training:.1f} hours</p>', unsafe_allow_html=True)
             else:
-                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                st.markdown('<p style="font-size: 28px; font-weight: bold; margin: 0; color: #3949AB;">--</p>', unsafe_allow_html=True)
                 
             st.markdown("""
-            **Definition**: Average training hours per employee
-            
-            **Impact**: Investment in employee development and skill enhancement
-            """)
-            st.markdown('</div>', unsafe_allow_html=True)
+                </div>
+                <div style="margin-top: 15px; color: #333;">
+                    <p style="margin: 5px 0;"><strong>Definition:</strong> Average training hours per employee</p>
+                    <p style="margin: 5px 0;"><strong>Impact:</strong> Investment in employee development and skill enhancement</p>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
         
         with metric_col6:
-            #st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.markdown("### 💰 Salary Growth")
+            st.markdown("""
+            <div style="background-color: #fffdf5; padding: 15px; border-radius: 10px; border: 1px solid #ddd; height: 100%;">
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <span style="font-size: 36px;">💰</span>
+                    <h3 style="margin: 5px 0; color: #F39C12;">Salary Growth</h3>
+                </div>
+                <div style="text-align: center; margin: 15px 0;">
+            """, unsafe_allow_html=True)
             
             if df is not None:
                 avg_salary_diff = df['Diferencia Salario'].mean()
                 pct_with_increase = (df['Diferencia Salario'] > 0).mean() * 100
-                st.markdown(f'<p class="metric-value">€{avg_salary_diff:.0f}</p>', unsafe_allow_html=True)
-                st.markdown(f'<p class="metric-label">{pct_with_increase:.1f}% received an increase</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="font-size: 28px; font-weight: bold; margin: 0; color: #F39C12;">€{avg_salary_diff:.0f}</p>', unsafe_allow_html=True)
+                st.markdown(f'<p style="font-size: 14px; margin: 5px 0; color: #F39C12;">{pct_with_increase:.1f}% received an increase</p>', unsafe_allow_html=True)
             else:
-                st.markdown('<p class="metric-value">--</p>', unsafe_allow_html=True)
+                st.markdown('<p style="font-size: 28px; font-weight: bold; margin: 0; color: #F39C12;">--</p>', unsafe_allow_html=True)
                 
             st.markdown("""
-            **Definition**: Average salary increase in 2020
-            
-            **Impact**: Indicator of compensation strategy and employee value
-            """)
-            st.markdown('</div>', unsafe_allow_html=True)
+                </div>
+                <div style="margin-top: 15px; color: #333;">
+                    <p style="margin: 5px 0;"><strong>Definition:</strong> Average salary increase in 2020</p>
+                    <p style="margin: 5px 0;"><strong>Impact:</strong> Indicator of compensation strategy and employee value</p>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
     
     elif overview_submenu == "Conclusions":
         st.markdown('<p class="section-header">🎯 Project Conclusions</p>', unsafe_allow_html=True)
