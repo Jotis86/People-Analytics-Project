@@ -1204,7 +1204,7 @@ elif menu == "🔮 ML Predictions":
             # Display result
             st.markdown(f"""
             <div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; 
-                        border-left: 5px solid {risk_color}; margin-top: 20px; width: 70%;"> <!-- Added width: 70% -->
+                        border-left: 5px solid {risk_color}; margin-top: 20px; width: 100%;"> <!-- Added width: 70% -->
                 <h3 style="color: {risk_color}; margin-top: 0;">Turnover Risk: {risk_level}</h3>
                 <p style="color: #333;">{risk_message}</p> <!-- Added color to ensure visibility -->
                 <p style="color: #333;">Probability of leaving: <b>{risk_score:.2%}</b></p> <!-- Added color -->
