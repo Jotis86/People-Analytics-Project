@@ -105,60 +105,53 @@ with st.sidebar:
 # Load data for visualizations
 df = load_data()
 
+
 # Secciones del menú
 if menu == "🏠 Home & Objectives":
-    # Banner with animated welcome
-    st.markdown("""
-    <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; border-left: 8px solid #1E88E5;">
-        <h2 style="color: #1E88E5; margin-bottom: 0px;">✨ Welcome to People Analytics Dashboard ✨</h2>
-        <p style="font-style: italic; color: #555;">Data-driven insights for strategic HR decisions</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Introduction with visual cards
+    # Introduction with visual cards - improved text contrast
     st.markdown("""
     <div style="display: flex; margin-bottom: 25px;">
         <div style="flex: 2; background: linear-gradient(135deg, #EBF5FB 0%, #D4E6F1 100%); border-radius: 10px; padding: 20px; margin-right: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3 style="color: #2874A6; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #2874A6; padding-bottom: 10px;">
+            <h3 style="color: #0D47A1; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #0D47A1; padding-bottom: 10px;">
                 📊 Interactive Analytics Platform
             </h3>
-            <p style="font-size: 16px; line-height: 1.6;">
+            <p style="font-size: 16px; line-height: 1.6; color: #333;">
                 This comprehensive dashboard provides powerful visualization and analysis tools for workforce data, enabling HR professionals and managers to make informed decisions.
             </p>
         </div>
         <div style="flex: 1; background: linear-gradient(135deg, #E8F8F5 0%, #D1F2EB 100%); border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3 style="color: #16A085; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #16A085; padding-bottom: 10px;">
+            <h3 style="color: #00695C; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #00695C; padding-bottom: 10px;">
                 🎯 Our Mission
             </h3>
-            <p style="font-size: 16px; line-height: 1.6; text-align: center;">
+            <p style="font-size: 16px; line-height: 1.6; text-align: center; color: #333;">
                 Transform HR data into actionable insights to optimize workforce performance and employee satisfaction.
             </p>
         </div>
     </div>
     """, unsafe_allow_html=True)
     
-    # Key features section with icons and visual elements
+    # Key features section with icons and visual elements - fixed text overflow
     st.markdown("<h3 style='text-align: center; color: #3498DB; margin-top: 10px;'>🔎 Key Analysis Features</h3>", unsafe_allow_html=True)
     
     feature_cols = st.columns(5)
     
     features = [
-        {"icon": "🔄", "title": "Retention Analysis", "color": "#3498DB", "detail": "Identify turnover patterns and retention strategies"},
-        {"icon": "📈", "title": "Performance Insights", "color": "#9B59B6", "detail": "Analyze evaluation metrics and improvement areas"},
-        {"icon": "😊", "title": "Satisfaction Metrics", "color": "#2ECC71", "detail": "Track engagement and NPS scores over time"},
-        {"icon": "📚", "title": "Training Impact", "color": "#F39C12", "detail": "Measure effectiveness of development programs"},
-        {"icon": "📉", "title": "Absenteeism Tracking", "color": "#E74C3C", "detail": "Monitor attendance patterns and causes"}
+        {"icon": "🔄", "title": "Retention Analysis", "color": "#3498DB", "detail": "Identify turnover patterns"},
+        {"icon": "📈", "title": "Performance Insights", "color": "#9B59B6", "detail": "Analyze evaluation metrics"},
+        {"icon": "😊", "title": "Satisfaction Metrics", "color": "#2ECC71", "detail": "Track engagement and NPS"},
+        {"icon": "📚", "title": "Training Impact", "color": "#F39C12", "detail": "Measure development progress"},
+        {"icon": "📉", "title": "Absenteeism", "color": "#E74C3C", "detail": "Monitor attendance patterns"}
     ]
     
     for i, col in enumerate(feature_cols):
         with col:
             feature = features[i]
             st.markdown(f"""
-            <div style="background-color: white; border-radius: 10px; padding: 15px; height: 180px; text-align: center; 
+            <div style="background-color: white; border-radius: 10px; padding: 15px; height: 160px; text-align: center; 
                         border-top: 5px solid {feature['color']}; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                <div style="font-size: 2.5rem; margin-bottom: 10px;">{feature['icon']}</div>
-                <h4 style="color: {feature['color']}; margin-bottom: 10px; font-size: 16px;">{feature['title']}</h4>
-                <p style="font-size: 12px; color: #555;">{feature['detail']}</p>
+                <div style="font-size: 2rem; margin-bottom: 10px;">{feature['icon']}</div>
+                <h4 style="color: {feature['color']}; margin-bottom: 8px; font-size: 15px;">{feature['title']}</h4>
+                <p style="font-size: 11px; color: #333;">{feature['detail']}</p>
             </div>
             """, unsafe_allow_html=True)
     
@@ -181,26 +174,29 @@ if menu == "🏠 Home & Objectives":
             st.markdown(f"""
             <div style="background-color: white; border-radius: 10px; padding: 15px; text-align: center; 
                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                <div style="font-size: 2rem;">{obj['icon']}</div>
-                <h4 style="font-size: 14px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                <div style="font-size: 1.8rem;">{obj['icon']}</div>
+                <h4 style="font-size: 13px; height: 36px; display: flex; align-items: center; justify-content: center; color: #333;">
                     {obj['title']}
                 </h4>
-                <div style="background-color: #f0f0f0; border-radius: 10px; height: 10px; margin: 10px 0;">
-                    <div style="background-color: {obj['color']}; width: {obj['progress']}%; height: 10px; border-radius: 10px;"></div>
+                <div style="background-color: #f0f0f0; border-radius: 10px; height: 8px; margin: 8px 0;">
+                    <div style="background-color: {obj['color']}; width: {obj['progress']}%; height: 8px; border-radius: 10px;"></div>
                 </div>
                 <p style="font-size: 12px; color: {obj['color']}; font-weight: bold;">{obj['progress']}% Complete</p>
             </div>
             """, unsafe_allow_html=True)
     
-    # Visual footer with call to action
+    # Smaller, more compact CTA
     st.markdown("""
-    <div style="background: linear-gradient(135deg, #F5EEF8 0%, #EBF5FB 100%); padding: 20px; border-radius: 10px; 
-                text-align: center; margin-top: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border: 1px dashed #3498DB;">
-        <h3 style="color: #3498DB;">Ready to explore the data?</h3>
-        <p style="color: #555;">Navigate through the dashboard sections using the sidebar menu</p>
-        <p style="font-size: 2rem;">👈</p>
+    <div style="background: linear-gradient(135deg, #F5EEF8 0%, #EBF5FB 100%); padding: 12px; border-radius: 8px; 
+                text-align: center; margin-top: 25px; width: 60%; margin-left: auto; margin-right: auto;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); border: 1px dashed #3498DB;">
+        <h4 style="color: #3498DB; margin: 0 0 5px 0;">Ready to explore the data?</h4>
+        <p style="color: #555; margin: 0 0 5px 0; font-size: 14px;">Navigate using the sidebar menu</p>
+        <p style="font-size: 1.5rem; margin: 0;">👈</p>
     </div>
     """, unsafe_allow_html=True)
+
+
 
 elif menu == "📊 Project Overview":
     st.markdown('<p class="section-header">📊 Project Overview</p>', unsafe_allow_html=True)
