@@ -1,6 +1,6 @@
 # 📊 People Analytics Project
 
-![Cover Image](images/principal.png)
+![Cover Image](images/banner.png)
 
 ![Commits](https://img.shields.io/github/commit-activity/m/Jotis86/People-Analytics-Project)
 ![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/People-Analytics-Project)
