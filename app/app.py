@@ -107,37 +107,100 @@ df = load_data()
 
 # Secciones del menú
 if menu == "🏠 Home & Objectives":
-    st.markdown('<p class="section-header">📋 Introduction & 🎯 Objectives</p>', unsafe_allow_html=True)
+    # Banner with animated welcome
+    st.markdown("""
+    <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; text-align: center; margin-bottom: 25px; border-left: 8px solid #1E88E5;">
+        <h2 style="color: #1E88E5; margin-bottom: 0px;">✨ Welcome to People Analytics Dashboard ✨</h2>
+        <p style="font-style: italic; color: #555;">Data-driven insights for strategic HR decisions</p>
+    </div>
+    """, unsafe_allow_html=True)
     
-    # Use columns for layout
-    col1, col2 = st.columns([2, 1])
+    # Introduction with visual cards
+    st.markdown("""
+    <div style="display: flex; margin-bottom: 25px;">
+        <div style="flex: 2; background: linear-gradient(135deg, #EBF5FB 0%, #D4E6F1 100%); border-radius: 10px; padding: 20px; margin-right: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #2874A6; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #2874A6; padding-bottom: 10px;">
+                📊 Interactive Analytics Platform
+            </h3>
+            <p style="font-size: 16px; line-height: 1.6;">
+                This comprehensive dashboard provides powerful visualization and analysis tools for workforce data, enabling HR professionals and managers to make informed decisions.
+            </p>
+        </div>
+        <div style="flex: 1; background: linear-gradient(135deg, #E8F8F5 0%, #D1F2EB 100%); border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #16A085; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #16A085; padding-bottom: 10px;">
+                🎯 Our Mission
+            </h3>
+            <p style="font-size: 16px; line-height: 1.6; text-align: center;">
+                Transform HR data into actionable insights to optimize workforce performance and employee satisfaction.
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     
-    with col1:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("""
-        ### Welcome to People Analytics!
-        
-        This project provides interactive analysis of key employee metrics to support strategic decision-making, including:
-        
-        - 📊 **Employee retention and turnover analysis**
-        - 📈 **Performance evaluation insights**
-        - 😊 **Satisfaction and engagement metrics**
-        - 📚 **Training impact assessment**
-        - 📉 **Absenteeism analysis**
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
+    # Key features section with icons and visual elements
+    st.markdown("<h3 style='text-align: center; color: #3498DB; margin-top: 10px;'>🔎 Key Analysis Features</h3>", unsafe_allow_html=True)
     
-    with col2:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown("### Primary Objectives")
-        st.markdown("""
-        - 📊 Data-driven HR insights
-        - 🔍 Identify retention factors
-        - 📈 Optimize performance
-        - 🌟 Enhance employee experience
-        - 📊 Strategic workforce planning
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
+    feature_cols = st.columns(5)
+    
+    features = [
+        {"icon": "🔄", "title": "Retention Analysis", "color": "#3498DB", "detail": "Identify turnover patterns and retention strategies"},
+        {"icon": "📈", "title": "Performance Insights", "color": "#9B59B6", "detail": "Analyze evaluation metrics and improvement areas"},
+        {"icon": "😊", "title": "Satisfaction Metrics", "color": "#2ECC71", "detail": "Track engagement and NPS scores over time"},
+        {"icon": "📚", "title": "Training Impact", "color": "#F39C12", "detail": "Measure effectiveness of development programs"},
+        {"icon": "📉", "title": "Absenteeism Tracking", "color": "#E74C3C", "detail": "Monitor attendance patterns and causes"}
+    ]
+    
+    for i, col in enumerate(feature_cols):
+        with col:
+            feature = features[i]
+            st.markdown(f"""
+            <div style="background-color: white; border-radius: 10px; padding: 15px; height: 180px; text-align: center; 
+                        border-top: 5px solid {feature['color']}; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 2.5rem; margin-bottom: 10px;">{feature['icon']}</div>
+                <h4 style="color: {feature['color']}; margin-bottom: 10px; font-size: 16px;">{feature['title']}</h4>
+                <p style="font-size: 12px; color: #555;">{feature['detail']}</p>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    # Strategic objectives with progress indicators
+    st.markdown("<h3 style='text-align: center; color: #E67E22; margin-top: 30px;'>🚀 Strategic Objectives</h3>", unsafe_allow_html=True)
+    
+    objectives = [
+        {"title": "Data-driven HR Decisions", "icon": "📊", "progress": 85, "color": "#3498DB"},
+        {"title": "Identify Retention Factors", "icon": "🔍", "progress": 70, "color": "#9B59B6"},
+        {"title": "Optimize Performance", "icon": "📈", "progress": 60, "color": "#2ECC71"},
+        {"title": "Enhance Employee Experience", "icon": "🌟", "progress": 75, "color": "#F39C12"},
+        {"title": "Strategic Workforce Planning", "icon": "🗓️", "progress": 55, "color": "#E74C3C"}
+    ]
+    
+    obj_cols = st.columns(len(objectives))
+    
+    for i, col in enumerate(obj_cols):
+        with col:
+            obj = objectives[i]
+            st.markdown(f"""
+            <div style="background-color: white; border-radius: 10px; padding: 15px; text-align: center; 
+                       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 2rem;">{obj['icon']}</div>
+                <h4 style="font-size: 14px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    {obj['title']}
+                </h4>
+                <div style="background-color: #f0f0f0; border-radius: 10px; height: 10px; margin: 10px 0;">
+                    <div style="background-color: {obj['color']}; width: {obj['progress']}%; height: 10px; border-radius: 10px;"></div>
+                </div>
+                <p style="font-size: 12px; color: {obj['color']}; font-weight: bold;">{obj['progress']}% Complete</p>
+            </div>
+            """, unsafe_allow_html=True)
+    
+    # Visual footer with call to action
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #F5EEF8 0%, #EBF5FB 100%); padding: 20px; border-radius: 10px; 
+                text-align: center; margin-top: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border: 1px dashed #3498DB;">
+        <h3 style="color: #3498DB;">Ready to explore the data?</h3>
+        <p style="color: #555;">Navigate through the dashboard sections using the sidebar menu</p>
+        <p style="font-size: 2rem;">👈</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 elif menu == "📊 Project Overview":
     st.markdown('<p class="section-header">📊 Project Overview</p>', unsafe_allow_html=True)
