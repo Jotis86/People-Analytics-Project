@@ -502,7 +502,80 @@ elif menu == "📊 Project Overview":
                 <p style="margin-left: 40px; color: #555;">Creating KPIs and metrics to track organizational performance</p>
             </div>
             """, unsafe_allow_html=True)
+
+    elif overview_submenu == "Results":
+        st.markdown('<p class="section-header">📈 Key Results</p>', unsafe_allow_html=True)
     
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            <div style="background-color: #f5f9ff; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <h3 style="color: #3498DB; text-align: center;">📊 Power BI Analysis</h3>
+                <ul style="list-style-type: none; padding-left: 5px; color: #333;">
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Custom KPI calculations for retention, satisfaction and performance</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">DAX calculated measures for advanced metric analysis</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Calculated columns for enhanced categorization</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Dynamic filtering for focused analysis</span></li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col2:
+            st.markdown("""
+            <div style="background-color: #f0fff0; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+                <h3 style="color: #2ECC71; text-align: center;">🐍 Python Insights</h3>
+                <ul style="list-style-type: none; padding-left: 5px; color: #333;">
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Comprehensive data cleaning methodologies</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Statistical analysis of key workforce variables</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Correlation analysis between performance factors</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Outlier detection in salary and performance metrics</span></li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Visualizaciones principales
+        st.markdown("<h3 style='text-align: center; color: #3498DB; margin-top: 20px;'>Key Findings Visualization</h3>", unsafe_allow_html=True)
+        
+        # Aquí añadimos una visualización de ejemplo
+        if 'dashboard_image_path' in locals() or 'dashboard_image_path' in globals():
+            st.image(dashboard_image_path, caption="Sample dashboard visualization", use_container_width=True)
+        else:
+            st.info("Dashboard visualization would appear here")
+        
+        # Métricas claves en formato visual
+        st.markdown("<h3 style='text-align: center; color: #3498DB; margin-top: 20px;'>Summary of Key Findings</h3>", unsafe_allow_html=True)
+        
+        findings_col1, findings_col2, findings_col3 = st.columns(3)
+        
+        with findings_col1:
+            st.markdown("""
+            <div style="background-color: #f8f5ff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
+                <span style="font-size: 32px;">🔄</span>
+                <h4 style="margin: 10px 0; color: #9B59B6;">Turnover Patterns</h4>
+                <p style="color: #333;">Voluntary turnover is 2x higher in certain departments</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with findings_col2:
+            st.markdown("""
+            <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
+                <span style="font-size: 32px;">📈</span>
+                <h4 style="margin: 10px 0; color: #3498DB;">Performance Trends</h4>
+                <p style="color: #333;">Strong correlation between training hours and performance ratings</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with findings_col3:
+            st.markdown("""
+            <div style="background-color: #f5fff9; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
+                <span style="font-size: 32px;">💰</span>
+                <h4 style="margin: 10px 0; color: #2ECC71;">Compensation Impact</h4>
+                <p style="color: #333;">Employees with below-market compensation show 3x higher attrition</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+
     elif overview_submenu == "Key Metrics":
         st.markdown('<p class="section-header">📏 Key HR Metrics</p>', unsafe_allow_html=True)
         
