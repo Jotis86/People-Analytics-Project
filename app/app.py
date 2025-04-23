@@ -245,7 +245,7 @@ with st.sidebar:
         <p>Version 1.0.0</p>
         <p>© 2023</p>
     </div>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True) 
 
 
 # Load data for visualizations
