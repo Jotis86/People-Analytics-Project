@@ -58,7 +58,7 @@ def load_data():
 @st.cache_resource
 def load_model():
     try:
-        model_path = os.path.join('models', 'modelo_rotacion_externa_random_forest.pkl')
+        model_path = os.path.join(current_dir, 'modelo_rotacion_externa_random_forest.pkl')
         with open(model_path, 'rb') as file:
             model = pickle.load(file)
         return model
