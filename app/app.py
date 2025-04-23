@@ -151,13 +151,13 @@ elif menu == "📊 Project Overview":
     
     if overview_submenu == "Project Structure":
         # Display project diagram
-        st.image(dashboard_image_path, use_container_width=True)
+        #st.image(dashboard_image_path, use_container_width=True)
         
         # Use tabs for better organization
         tab1, tab2, tab3 = st.tabs(["Functionality", "Tools Used", "Process"])
         
         with tab1:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
+            #st.markdown('<div class="card">', unsafe_allow_html=True)
             st.markdown("""
             ### Key Functionality
             
