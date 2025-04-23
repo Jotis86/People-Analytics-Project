@@ -360,7 +360,7 @@ elif menu == "📊 Project Overview":
         st.markdown('<p class="section-header">🎯 Project Conclusions</p>', unsafe_allow_html=True)
         
         # Key Findings with more visual formatting
-        st.markdown('<div class="card">', unsafe_allow_html=True)
+        #st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #1E88E5;'>💡 Key Findings</h3>", unsafe_allow_html=True)
         
         # Two columns for findings to make it more compact
@@ -394,7 +394,7 @@ elif menu == "📊 Project Overview":
         st.markdown('</div>', unsafe_allow_html=True)
         
         # Recommendations section with visual indicators
-        st.markdown('<div class="card">', unsafe_allow_html=True)
+        #st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #FF5722;'>🚀 Recommendations</h3>", unsafe_allow_html=True)
         
         rec_cols = st.columns(4)
@@ -438,7 +438,7 @@ elif menu == "📊 Project Overview":
         st.markdown('</div>', unsafe_allow_html=True)
         
         # Future Directions with visual timeline
-        st.markdown('<div class="card">', unsafe_allow_html=True)
+        #st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("<h3 style='text-align: center; color: #4CAF50;'>🔮 Future Directions</h3>", unsafe_allow_html=True)
         
         # Progress bar to visualize implementation timeline
@@ -488,7 +488,7 @@ elif menu == "📊 Project Overview":
         # Signature
         st.markdown("""
         <div style="text-align: center; margin-top: 30px; color: #555;">
-        <p>Project developed by Juan Duran Bon</p>
+        <p>Project developed by Jotis with love</p>
         </div>
         """, unsafe_allow_html=True)
 
