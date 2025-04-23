@@ -254,7 +254,7 @@ with st.sidebar:
             text-align: center;
             background-color: white;
             color: black;
-            text-decoration: none;
+            text-decoration: none !important; /* Added !important to ensure no underline */
             font-weight: bold;
             padding: 0.5rem;
             border-radius: 0.3rem;
