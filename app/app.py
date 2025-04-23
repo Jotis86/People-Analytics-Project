@@ -184,7 +184,7 @@ elif menu == "📊 Project Overview":
                 st.markdown('</div>', unsafe_allow_html=True)
             
             with col2:
-                st.markdown('<div class="card">', unsafe_allow_html=True)
+                #st.markdown('<div class="card">', unsafe_allow_html=True)
                 st.markdown("""
                 ### Python Analysis
                 
