@@ -77,7 +77,34 @@ summary_image_path = os.path.join(current_dir, 'summary.png')
 clip_video_path = os.path.join(current_dir, 'clip.mp4')
 
 # Título de la aplicación
-st.markdown('<p class="main-header">People Analytics Project</p>', unsafe_allow_html=True)
+# Enhanced application title with gradient styling
+st.markdown("""
+<div style="background: linear-gradient(to right, #1E3A8A, #3B82F6); 
+            padding: 15px; 
+            border-radius: 10px; 
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 8px solid #1E40AF;">
+    <h1 style="color: white; 
+              font-size: 36px; 
+              margin: 0;
+              text-align: center;
+              font-weight: 600;
+              letter-spacing: 1px;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
+        <span style="margin-right: 10px;">👥</span>
+        People Analytics Project
+        <span style="margin-left: 10px;">📊</span>
+    </h1>
+    <p style="color: #E5E7EB; 
+              text-align: center; 
+              margin: 8px 0 0 0;
+              font-size: 16px;
+              font-style: italic;">
+        Data-driven insights for strategic HR decisions
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 # Mostrar imagen principal con tamaño controlado
 st.image(principal_image_path, use_container_width=True)
