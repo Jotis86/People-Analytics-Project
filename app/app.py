@@ -657,7 +657,7 @@ elif menu == "📊 Project Overview":
                 
             st.markdown("""
                 </div>
-                <div style="margin-top: 15px; color: #333;">
+                <div style="margin-top: 15px; color: #9B59B6;">
                     <p style="margin: 5px 0;"><strong>Definition:</strong> Net Promoter Score measuring employee loyalty</p>
                     <p style="margin: 5px 0;"><strong>Formula:</strong> Promoters % - Detractors %</p>
                     <p style="margin: 5px 0;"><strong>Scale:</strong> 1-10, where 9-10: Promoters, 7-8: Passive, 1-6: Detractors</p>
@@ -683,7 +683,7 @@ elif menu == "📊 Project Overview":
                 
             st.markdown("""
                 </div>
-                <div style="margin-top: 15px; color: #333;">
+                <div style="margin-top: 15px; color: #2ECC71;">
                     <p style="margin: 5px 0;"><strong>Definition:</strong> Average work days lost per employee</p>
                     <p style="margin: 5px 0;"><strong>Impact:</strong> High absenteeism can indicate workplace issues or job dissatisfaction</p>
                 </div>
@@ -714,7 +714,7 @@ elif menu == "📊 Project Overview":
                 
             st.markdown("""
                 </div>
-                <div style="margin-top: 15px; color: #333;">
+                <div style="margin-top: 15px; color: #E74C3C;">
                     <p style="margin: 5px 0;"><strong>Definition:</strong> Average performance evaluation score</p>
                     <p style="margin: 5px 0;"><strong>Scale:</strong> 1-10, with 10 being the highest performance</p>
                 </div>
@@ -739,7 +739,7 @@ elif menu == "📊 Project Overview":
                 
             st.markdown("""
                 </div>
-                <div style="margin-top: 15px; color: #333;">
+                <div style="margin-top: 15px; color: #3949AB;">
                     <p style="margin: 5px 0;"><strong>Definition:</strong> Average training hours per employee</p>
                     <p style="margin: 5px 0;"><strong>Impact:</strong> Investment in employee development and skill enhancement</p>
                 </div>
@@ -766,7 +766,7 @@ elif menu == "📊 Project Overview":
                 
             st.markdown("""
                 </div>
-                <div style="margin-top: 15px; color: #333;">
+                <div style="margin-top: 15px; color: #F39C12;">
                     <p style="margin: 5px 0;"><strong>Definition:</strong> Average salary increase in 2020</p>
                     <p style="margin: 5px 0;"><strong>Impact:</strong> Indicator of compensation strategy and employee value</p>
                 </div>
