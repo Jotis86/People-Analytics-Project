@@ -585,7 +585,7 @@ elif menu == "📊 Project Overview":
             <div style="background-color: #f8f5ff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
                 <span style="font-size: 32px;">🔄</span>
                 <h4 style="margin: 10px 0; color: #9B59B6;">Turnover Patterns</h4>
-                <p style="color: #333;">Voluntary turnover is 2x higher in certain organizational areas</p>
+                <p style="color: #333;">Voluntary turnover rates are significantly higher in specific organizational business units.</p>
             </div>
             """, unsafe_allow_html=True)
         
@@ -594,7 +594,7 @@ elif menu == "📊 Project Overview":
             <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
                 <span style="font-size: 32px;">📈</span>
                 <h4 style="margin: 10px 0; color: #3498DB;">Performance Trends</h4>
-                <p style="color: #333;">Strong correlation between training hours and performance ratings</p>
+                <p style="color: #333;">Higher training hours are strongly correlated with better employee performance ratings.</p>
             </div>
             """, unsafe_allow_html=True)
         
@@ -603,7 +603,7 @@ elif menu == "📊 Project Overview":
             <div style="background-color: #f5fff9; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
                 <span style="font-size: 32px;">💰</span>
                 <h4 style="margin: 10px 0; color: #2ECC71;">Compensation Impact</h4>
-                <p style="color: #333;">Employees with below-market compensation show 3x higher attrition</p>
+                <p style="color: #333;">Employees with below-average compensation exhibit significantly higher attrition rates overall.</p>
             </div>
             """, unsafe_allow_html=True)
 
