@@ -824,7 +824,7 @@ elif menu == "📊 Project Overview":
                     <span style="font-size: 2rem; color: white;">📚</span>
                 </div>
                 <h4 style="color: #FF9800; margin: 10px 0;">Targeted Training</h4>
-                <p style="color: #333; margin: 0;">Increase training in departments with lower performance scores</p>
+                <p style="color: #333; margin: 0;">Increase training in areas with lower performance scores</p>
             </div>
             """, unsafe_allow_html=True)
         
