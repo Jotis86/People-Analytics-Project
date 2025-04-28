@@ -558,8 +558,8 @@ elif menu == "📊 Project Overview":
             <div style="background-color: #f0fff0; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
                 <h3 style="color: #2ECC71; text-align: center;">🐍 Python Insights</h3>
                 <ul style="list-style-type: none; padding-left: 5px; color: #333;">
-                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Comprehensive data cleaning methodologies</span></li>
-                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Statistical analysis of key workforce variables</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Comprehensive and efficient data cleaning methodologies</span></li>
+                    <li style="margin-bottom: 5px;">✓ <span style="color: #333;">In-depth statistical analysis of key workforce variables</span></li>
                     <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Correlation analysis</span></li>
                     <li style="margin-bottom: 5px;">✓ <span style="color: #333;">Outlier detection in salary and performance metrics</span></li>
                 </ul>
