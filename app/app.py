@@ -603,7 +603,7 @@ elif menu == "📊 Project Overview":
             <div style="background-color: #f5fff9; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
                 <span style="font-size: 32px;">💰</span>
                 <h4 style="margin: 10px 0; color: #2ECC71;">Compensation Impact</h4>
-                <p style="color: #333;">Employees with below-average compensation exhibit significantly higher attrition rates overall.</p>
+                <p style="color: #333;">Employees with below-average compensation exhibit significantly attrition rates overall.</p>
             </div>
             """, unsafe_allow_html=True)
 
