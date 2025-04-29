@@ -594,7 +594,7 @@ elif menu == "📊 Project Overview":
             <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #ddd;">
                 <span style="font-size: 32px;">📈</span>
                 <h4 style="margin: 10px 0; color: #3498DB;">Performance Trends</h4>
-                <p style="color: #333;">Higher training hours are strongly correlated with better employee performance ratings.</p>
+                <p style="color: #333;">Higher training hours are strongly correlated with significantly improved employee performance ratings.</p>
             </div>
             """, unsafe_allow_html=True)
         
