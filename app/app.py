@@ -1337,7 +1337,7 @@ elif menu == "🔮 ML Predictions":
     st.markdown("""
     <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; border-left: 5px solid #2E86C1; margin-bottom: 20px;">
         <h3 style="color: #2E86C1; margin-top: 0;">Employee Turnover Prediction</h3>
-        <p>This tool predicts the likelihood of an employee leaving the company based on various HR factors.</p>
+        <p style="color: var(--text-color, #333);">This tool predicts the likelihood of an employee leaving the company based on various HR factors.</p>
     </div>
     """, unsafe_allow_html=True)
     
