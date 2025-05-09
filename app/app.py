@@ -510,7 +510,7 @@ elif menu == "📊 Project Overview":
             <h3 style="color: #3498DB; text-align: center; margin-bottom: 20px;">Development Process</h3>
             
             <div style="background-color: #f5f9ff; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                <h4><span style="display: inline-block; background-color: #3498DB; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">1</span> Data Extraction</h4>
+                <h4><span style="display: inline-block; background-color: #3498DB; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">1</span> <span style="color: #555;">Data Extraction</span></h4>
                 <p style="margin-left: 40px; color: #555;">Connecting to HR systems and retrieving necessary workforce data</p>
             </div>
             
