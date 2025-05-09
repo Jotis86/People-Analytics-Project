@@ -515,22 +515,22 @@ elif menu == "📊 Project Overview":
             </div>
             
             <div style="background-color: #f8f5ff; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                <h4><span style="display: inline-block; background-color: #9B59B6; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">2</span> Cleaning & Transformation</h4>
+                <h4><span style="display: inline-block; background-color: #9B59B6; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">2</span> <span style="color: #555;">Cleaning & Transformation</span></h4>
                 <p style="margin-left: 40px; color: #555;">Processing and standardizing data for consistent analysis</p>
             </div>
             
             <div style="background-color: #f5fff9; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                <h4><span style="display: inline-block; background-color: #2ECC71; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">3</span> Exploratory Analysis</h4>
+                <h4><span style="display: inline-block; background-color: #2ECC71; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">3</span> <span style="color: #555;">Exploratory Analysis</span></h4>
                 <p style="margin-left: 40px; color: #555;">Discovering patterns, relationships, and insights in the data</p>
             </div>
             
             <div style="background-color: #fffcf5; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                <h4><span style="display: inline-block; background-color: #F39C12; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">4</span> Dashboard Creation</h4>
+                <h4><span style="display: inline-block; background-color: #F39C12; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">4</span> <span style="color: #555;">Dashboard Creation</span></h4>
                 <p style="margin-left: 40px; color: #555;">Building interactive visualizations for data exploration</p>
             </div>
             
             <div style="background-color: #fff9f5; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
-                <h4><span style="display: inline-block; background-color: #E74C3C; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">5</span> Metric Development</h4>
+                <h4><span style="display: inline-block; background-color: #E74C3C; color: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px; margin-right: 10px;">5</span> <span style="color: #555;">Metric Development</span></h4>
                 <p style="margin-left: 40px; color: #555;">Creating KPIs and metrics to track organizational performance</p>
             </div>
             """, unsafe_allow_html=True)
