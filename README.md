@@ -15,7 +15,7 @@
 
 ## 📋 Introduction
 
-Welcome to the **People Analytics** repository created with Power BI! 
+Welcome to the **People Analytics** repository! 
 This project aims to provide, analyze, and visualize employee-related data such as retention, performance, satisfaction, and more.
 
 ## 🎯 Objectives
